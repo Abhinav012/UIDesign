@@ -15,7 +15,7 @@ extension UIColor{
     }
     
     class var appRed: UIColor{
-        return UIColor(red: 252/255, green: 88/255, blue: 34/255, alpha: 1)
+        return UIColor(red: 254/255, green: 87/255, blue: 34/255, alpha: 1)
     }
     
     class var appBackground: UIColor{

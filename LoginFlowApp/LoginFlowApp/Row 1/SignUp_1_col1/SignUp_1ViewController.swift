@@ -23,9 +23,7 @@ class SignUp_1ViewController: UIViewController, SignUp_1DisplayLogic
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var createAccButton: UIButton!
     
-    @IBAction func menuButton(_ sender: Any) {
-    }
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var navMenuView: UIView!
     var interactor: SignUp_1BusinessLogic?
   var router: (NSObjectProtocol & SignUp_1RoutingLogic & SignUp_1DataPassing)?
 
@@ -81,8 +79,6 @@ class SignUp_1ViewController: UIViewController, SignUp_1DisplayLogic
   {
     super.viewDidLoad()
     if self.revealViewController() != nil {
-        menuButton.target = self.revealViewController()
-        menuButton.action = "revealToggle:"
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     updateUI()
@@ -96,9 +92,9 @@ class SignUp_1ViewController: UIViewController, SignUp_1DisplayLogic
     func updateUI(){
         UIApplication.shared.statusBarView?.backgroundColor = .appStatusBarRed
         setNeedsStatusBarAppearanceUpdate()
-        self.navigationController?.navigationBar.barTintColor = .appRed
+        self.navMenuView.backgroundColor = .appRed
         logoImageView.layer.cornerRadius = logoImageView.frame.width/2
-        createAccButton.backgroundColor = .appStatusBarRed
+        createAccButton.backgroundColor = .appRed
     }
   
   // MARK: Do something

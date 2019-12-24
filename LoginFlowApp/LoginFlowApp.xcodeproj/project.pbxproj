@@ -182,6 +182,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B113FE2323B1D75E00450997 /* Row 3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Row 3";
+			sourceTree = "<group>";
+		};
 		B11DC5C223ADDAA900DB496A /* Welcome_col_4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +264,7 @@
 				B1B0896223AB7D7F008E2472 /* Helper */,
 				B1E4336623B0771500900FFF /* Row 1 */,
 				B1E4336723B0776900900FFF /* Row 2 */,
+				B113FE2323B1D75E00450997 /* Row 3 */,
 				B1B0893E23AB78BF008E2472 /* AppDelegate.swift */,
 				B1B0894823AB78C0008E2472 /* Assets.xcassets */,
 				B1B0894A23AB78C0008E2472 /* LaunchScreen.storyboard */,
