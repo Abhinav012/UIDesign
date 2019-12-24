@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import SWRevealViewController
 
 class WelcomeViewController: ButtonBarPagerTabStripViewController {
 
@@ -22,6 +23,10 @@ class WelcomeViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = UIColor.appRed
         settings.style.buttonBarItemBackgroundColor = UIColor.appRed
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         UIApplication.shared.statusBarView?.backgroundColor = .appStatusBarRed
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

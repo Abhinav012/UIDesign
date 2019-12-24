@@ -76,10 +76,17 @@ class Login_6ViewController: UIViewController, Login_6DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     userImageView.layer.cornerRadius = userImageView.frame.width/2
     createAnAccount.backgroundColor = .appRed
     doSomething()
   }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
   
   // MARK: Do something
   

@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 protocol Login_5DisplayLogic: class
 {
@@ -81,9 +82,15 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     logoImageView.layer.cornerRadius = logoImageView.frame.width/2
     doSomething()
   }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
   
   // MARK: Do something
   

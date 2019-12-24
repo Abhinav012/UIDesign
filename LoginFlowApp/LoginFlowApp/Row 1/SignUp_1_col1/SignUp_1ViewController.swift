@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 protocol SignUp_1DisplayLogic: class
 {
@@ -22,7 +23,10 @@ class SignUp_1ViewController: UIViewController, SignUp_1DisplayLogic
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var createAccButton: UIButton!
     
-  var interactor: SignUp_1BusinessLogic?
+    @IBAction func menuButton(_ sender: Any) {
+    }
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    var interactor: SignUp_1BusinessLogic?
   var router: (NSObjectProtocol & SignUp_1RoutingLogic & SignUp_1DataPassing)?
 
   override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -76,6 +80,11 @@ class SignUp_1ViewController: UIViewController, SignUp_1DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        menuButton.target = self.revealViewController()
+        menuButton.action = "revealToggle:"
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     updateUI()
     doSomething()
   }

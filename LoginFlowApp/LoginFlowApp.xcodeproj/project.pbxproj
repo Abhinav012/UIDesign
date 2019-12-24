@@ -65,6 +65,7 @@
 		B1E433AF23B0BFB300900FFF /* SignUp_8Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E433A923B0BFB300900FFF /* SignUp_8Models.swift */; };
 		B1E433B023B0BFB300900FFF /* SignUp_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E433AA23B0BFB300900FFF /* SignUp_8ViewController.swift */; };
 		B1E433B123B0BFB300900FFF /* SignUp_8Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E433AB23B0BFB300900FFF /* SignUp_8Interactor.swift */; };
+		B1E433B423B0F78700900FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E433B323B0F78700900FFF /* ViewController.swift */; };
 		B1E9D22A23AC841800FF0F60 /* SignUp_2Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9D22423AC841800FF0F60 /* SignUp_2Presenter.swift */; };
 		B1E9D22B23AC841800FF0F60 /* SignUp_2Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9D22523AC841800FF0F60 /* SignUp_2Worker.swift */; };
 		B1E9D22C23AC841800FF0F60 /* SignUp_2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9D22623AC841800FF0F60 /* SignUp_2Router.swift */; };
@@ -144,6 +145,7 @@
 		B1E433A923B0BFB300900FFF /* SignUp_8Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_8Models.swift; sourceTree = "<group>"; };
 		B1E433AA23B0BFB300900FFF /* SignUp_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_8ViewController.swift; sourceTree = "<group>"; };
 		B1E433AB23B0BFB300900FFF /* SignUp_8Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_8Interactor.swift; sourceTree = "<group>"; };
+		B1E433B323B0F78700900FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1E9D22423AC841800FF0F60 /* SignUp_2Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_2Presenter.swift; sourceTree = "<group>"; };
 		B1E9D22523AC841800FF0F60 /* SignUp_2Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_2Worker.swift; sourceTree = "<group>"; };
 		B1E9D22623AC841800FF0F60 /* SignUp_2Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_2Router.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				B1B0894223AB78BF008E2472 /* Main.storyboard */,
 				B1B0894D23AB78C0008E2472 /* Info.plist */,
 				B1B0894523AB78BF008E2472 /* LoginFlowApp.xcdatamodeld */,
+				B1E433B323B0F78700900FFF /* ViewController.swift */,
 			);
 			path = LoginFlowApp;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				B11DC5DC23ADE55900DB496A /* SignIn_4Router.swift in Sources */,
 				B11DC5FA23AE229400DB496A /* Login_5Worker.swift in Sources */,
 				B11DC5CF23ADE52A00DB496A /* SignUp_4Router.swift in Sources */,
+				B1E433B423B0F78700900FFF /* ViewController.swift in Sources */,
 				B11DC5DD23ADE55900DB496A /* SignIn_4Models.swift in Sources */,
 				B1E4339B23B0906100900FFF /* SignUp_7Models.swift in Sources */,
 				B11DC5FE23AE229400DB496A /* Login_5Interactor.swift in Sources */,

@@ -25,7 +25,9 @@ class SignUp_8ViewController: UIViewController, SignUp_8DisplayLogic
     @IBOutlet weak var uploadImageButton: UIButton!
     @IBOutlet weak var signUpDetailsView: UIView!
     @IBOutlet weak var createAnAccountBtn: UIButton!
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
   // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -73,6 +75,9 @@ class SignUp_8ViewController: UIViewController, SignUp_8DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.barTintColor = UIColor.appRed
@@ -85,6 +90,10 @@ class SignUp_8ViewController: UIViewController, SignUp_8DisplayLogic
     createAnAccountBtn.backgroundColor = .appRed
     doSomething()
   }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
   
   // MARK: Do something
   

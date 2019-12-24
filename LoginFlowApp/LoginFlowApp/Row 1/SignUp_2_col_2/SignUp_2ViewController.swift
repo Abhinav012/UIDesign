@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 protocol SignUp_2DisplayLogic: class
 {
@@ -25,6 +26,7 @@ class SignUp_2ViewController: UIViewController, SignUp_2DisplayLogic
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var menuButton: UIButton!
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
@@ -75,10 +77,19 @@ class SignUp_2ViewController: UIViewController, SignUp_2DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+    
+    self.navigationController?.navigationBar.isHidden = true
     logoImageView.layer.cornerRadius = logoImageView.frame.width/2
     signUpButton.backgroundColor = .appRed
     doSomething()
   }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
   
   // MARK: Do something
   

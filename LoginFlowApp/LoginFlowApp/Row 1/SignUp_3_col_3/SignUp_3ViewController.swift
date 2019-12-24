@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 protocol SignUp_3DisplayLogic: class
 {
@@ -75,12 +76,18 @@ class SignUp_3ViewController: UIViewController, SignUp_3DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     createAccountButton.backgroundColor = UIColor.appRed
     self.view.backgroundColor = UIColor.appRed
     signInButton.tintColor = UIColor.appStatusBarRed
     doSomething()
   }
   
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
