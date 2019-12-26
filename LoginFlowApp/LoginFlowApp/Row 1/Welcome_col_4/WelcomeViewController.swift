@@ -16,6 +16,7 @@ class WelcomeViewController: ButtonBarPagerTabStripViewController {
         return .lightContent
     }
     
+    @IBOutlet weak var navBarView: UIView!
     override func viewDidLoad() {
         settings.style.buttonBarItemTitleColor = UIColor.white
         settings.style.buttonBarItemBackgroundColor = UIColor.clear
@@ -23,6 +24,8 @@ class WelcomeViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = UIColor.appRed
         settings.style.buttonBarItemBackgroundColor = UIColor.appRed
         super.viewDidLoad()
+        
+        navBarView.backgroundColor = UIColor.appRed
         
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
