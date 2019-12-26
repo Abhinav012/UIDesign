@@ -79,6 +79,7 @@ class Login_6ViewController: UIViewController, Login_6DisplayLogic
     if self.revealViewController() != nil {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+     UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     userImageView.layer.cornerRadius = userImageView.frame.width/2
     createAnAccount.backgroundColor = .appRed
     doSomething()

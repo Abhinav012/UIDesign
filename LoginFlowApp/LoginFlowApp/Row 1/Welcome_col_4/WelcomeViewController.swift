@@ -23,6 +23,7 @@ class WelcomeViewController: ButtonBarPagerTabStripViewController {
         settings.style.selectedBarBackgroundColor = UIColor.appBackground
         settings.style.buttonBarBackgroundColor = UIColor.appRed
         settings.style.buttonBarItemBackgroundColor = UIColor.appRed
+        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 13)
         super.viewDidLoad()
         
         navBarView.backgroundColor = UIColor.appRed

@@ -79,6 +79,7 @@ class SignUp_3ViewController: UIViewController, SignUp_3DisplayLogic
     if self.revealViewController() != nil {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+    UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     createAccountButton.backgroundColor = UIColor.appRed
     self.view.backgroundColor = UIColor.appRed
     signInButton.tintColor = UIColor.appStatusBarRed

@@ -14,22 +14,22 @@ class Welcome2ViewController: ButtonBarPagerTabStripViewController {
         return .lightContent
     }
     
+    @IBOutlet weak var navBarView: UIView!
     override func viewDidLoad() {
         settings.style.buttonBarItemTitleColor = UIColor.white
         settings.style.buttonBarItemBackgroundColor = UIColor.clear
         settings.style.selectedBarBackgroundColor = UIColor.appBackground
         settings.style.buttonBarBackgroundColor = UIColor.appRed
         settings.style.buttonBarItemBackgroundColor = UIColor.appRed
+        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 13)
         super.viewDidLoad()
         
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         UIApplication.shared.statusBarView?.backgroundColor = .appStatusBarRed
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.barTintColor = UIColor.appRed
         //self.title = "Welcome"
+        navBarView.backgroundColor = .appRed
         
         
     }

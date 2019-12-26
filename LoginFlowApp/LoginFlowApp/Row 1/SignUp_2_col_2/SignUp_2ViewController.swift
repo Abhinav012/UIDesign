@@ -82,6 +82,7 @@ class SignUp_2ViewController: UIViewController, SignUp_2DisplayLogic
     }
     
     self.navigationController?.navigationBar.isHidden = true
+     UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     logoImageView.layer.cornerRadius = logoImageView.frame.width/2
     signUpButton.backgroundColor = .appRed
     doSomething()

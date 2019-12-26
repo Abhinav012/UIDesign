@@ -86,6 +86,7 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     logoImageView.layer.cornerRadius = logoImageView.frame.width/2
+    UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     doSomething()
   }
     override func viewDidAppear(_ animated: Bool) {
@@ -143,7 +144,7 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! LoginDetailTableViewCell
         
         if indexPath.row >= 0 && indexPath.row <= 4{
-        cell.detailTextField.placeholder = "  " + credentialsPlaceHolders[indexPath.row]
+        cell.detailTextField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
         return cell
         }
          let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell") as! LoginButtonTableViewCell
@@ -157,7 +158,7 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 52
+        return 56
     }
 }
 
