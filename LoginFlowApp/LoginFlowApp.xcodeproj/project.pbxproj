@@ -28,6 +28,14 @@
 		B11DC5FC23AE229400DB496A /* Login_5Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DC5F623AE229400DB496A /* Login_5Models.swift */; };
 		B11DC5FD23AE229400DB496A /* Login_5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DC5F723AE229400DB496A /* Login_5ViewController.swift */; };
 		B11DC5FE23AE229400DB496A /* Login_5Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DC5F823AE229400DB496A /* Login_5Interactor.swift */; };
+		B128E37B23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E37A23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift */; };
+		B128E37D23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E37C23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift */; };
+		B128E38523B624A7007A91D5 /* SignUp_9Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E37F23B624A7007A91D5 /* SignUp_9Presenter.swift */; };
+		B128E38623B624A7007A91D5 /* SignUp_9Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38023B624A7007A91D5 /* SignUp_9Worker.swift */; };
+		B128E38723B624A7007A91D5 /* SignUp_9Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38123B624A7007A91D5 /* SignUp_9Router.swift */; };
+		B128E38823B624A7007A91D5 /* SignUp_9Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38223B624A7007A91D5 /* SignUp_9Models.swift */; };
+		B128E38923B624A7007A91D5 /* SignUp_9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38323B624A7007A91D5 /* SignUp_9ViewController.swift */; };
+		B128E38A23B624A7007A91D5 /* SignUp_9Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38423B624A7007A91D5 /* SignUp_9Interactor.swift */; };
 		B1B0893F23AB78BF008E2472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0893E23AB78BF008E2472 /* AppDelegate.swift */; };
 		B1B0894423AB78BF008E2472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B0894223AB78BF008E2472 /* Main.storyboard */; };
 		B1B0894723AB78BF008E2472 /* LoginFlowApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1B0894523AB78BF008E2472 /* LoginFlowApp.xcdatamodeld */; };
@@ -106,6 +114,14 @@
 		B11DC5F623AE229400DB496A /* Login_5Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_5Models.swift; sourceTree = "<group>"; };
 		B11DC5F723AE229400DB496A /* Login_5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_5ViewController.swift; sourceTree = "<group>"; };
 		B11DC5F823AE229400DB496A /* Login_5Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_5Interactor.swift; sourceTree = "<group>"; };
+		B128E37A23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInDetail_6TableViewCell.swift; sourceTree = "<group>"; };
+		B128E37C23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton_6TableViewCell.swift; sourceTree = "<group>"; };
+		B128E37F23B624A7007A91D5 /* SignUp_9Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Presenter.swift; sourceTree = "<group>"; };
+		B128E38023B624A7007A91D5 /* SignUp_9Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Worker.swift; sourceTree = "<group>"; };
+		B128E38123B624A7007A91D5 /* SignUp_9Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Router.swift; sourceTree = "<group>"; };
+		B128E38223B624A7007A91D5 /* SignUp_9Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Models.swift; sourceTree = "<group>"; };
+		B128E38323B624A7007A91D5 /* SignUp_9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9ViewController.swift; sourceTree = "<group>"; };
+		B128E38423B624A7007A91D5 /* SignUp_9Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Interactor.swift; sourceTree = "<group>"; };
 		B1B0893B23AB78BF008E2472 /* LoginFlowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginFlowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B0893E23AB78BF008E2472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B0894323AB78BF008E2472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +201,7 @@
 		B113FE2323B1D75E00450997 /* Row 3 */ = {
 			isa = PBXGroup;
 			children = (
+				B128E37E23B62461007A91D5 /* Sign Up 9 */,
 			);
 			path = "Row 3";
 			sourceTree = "<group>";
@@ -238,6 +255,19 @@
 				B11DC5F823AE229400DB496A /* Login_5Interactor.swift */,
 			);
 			path = SignUp_5_col_1;
+			sourceTree = "<group>";
+		};
+		B128E37E23B62461007A91D5 /* Sign Up 9 */ = {
+			isa = PBXGroup;
+			children = (
+				B128E37F23B624A7007A91D5 /* SignUp_9Presenter.swift */,
+				B128E38023B624A7007A91D5 /* SignUp_9Worker.swift */,
+				B128E38123B624A7007A91D5 /* SignUp_9Router.swift */,
+				B128E38223B624A7007A91D5 /* SignUp_9Models.swift */,
+				B128E38323B624A7007A91D5 /* SignUp_9ViewController.swift */,
+				B128E38423B624A7007A91D5 /* SignUp_9Interactor.swift */,
+			);
+			path = "Sign Up 9";
 			sourceTree = "<group>";
 		};
 		B1B0893223AB78BF008E2472 = {
@@ -322,6 +352,8 @@
 		B1E4336823B077A400900FFF /* Login_6_col_2 */ = {
 			isa = PBXGroup;
 			children = (
+				B128E37A23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift */,
+				B128E37C23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift */,
 				B1E4336923B0872000900FFF /* Login_6Presenter.swift */,
 				B1E4336A23B0872000900FFF /* Login_6Worker.swift */,
 				B1E4336B23B0872000900FFF /* Login_6Router.swift */,
@@ -535,13 +567,17 @@
 				B1E9D22D23AC841800FF0F60 /* SignUp_2Models.swift in Sources */,
 				B11DC5DF23ADE55900DB496A /* SignIn_4Interactor.swift in Sources */,
 				B11DC5FD23AE229400DB496A /* Login_5ViewController.swift in Sources */,
+				B128E38623B624A7007A91D5 /* SignUp_9Worker.swift in Sources */,
 				B1E4337323B0872000900FFF /* Login_6ViewController.swift in Sources */,
 				B1B0896123AB7B1B008E2472 /* Extensions.swift in Sources */,
 				B1E9D22A23AC841800FF0F60 /* SignUp_2Presenter.swift in Sources */,
 				B1B0894723AB78BF008E2472 /* LoginFlowApp.xcdatamodeld in Sources */,
 				B1B0895D23AB78FB008E2472 /* SignUp_1ViewController.swift in Sources */,
+				B128E38523B624A7007A91D5 /* SignUp_9Presenter.swift in Sources */,
+				B128E38723B624A7007A91D5 /* SignUp_9Router.swift in Sources */,
 				B1E4337723B08E8A00900FFF /* Welcome2ViewController.swift in Sources */,
 				B1E4339C23B0906100900FFF /* SignUp_7ViewController.swift in Sources */,
+				B128E37B23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift in Sources */,
 				B11DC5DA23ADE55900DB496A /* SignIn_4Presenter.swift in Sources */,
 				B1E433B023B0BFB300900FFF /* SignUp_8ViewController.swift in Sources */,
 				B11DC5D223ADE52A00DB496A /* SignUp_4Interactor.swift in Sources */,
@@ -573,12 +609,14 @@
 				B11DC5DB23ADE55900DB496A /* SignIn_4Worker.swift in Sources */,
 				B1E4338123B08FDB00900FFF /* SignIn_7Models.swift in Sources */,
 				B1B0895923AB78FB008E2472 /* SignUp_1Presenter.swift in Sources */,
+				B128E38823B624A7007A91D5 /* SignUp_9Models.swift in Sources */,
 				B1B0895B23AB78FB008E2472 /* SignUp_1Router.swift in Sources */,
 				B1E9D24123ACE5BC00FF0F60 /* SignUp_3Interactor.swift in Sources */,
 				B11DC5EF23AE20E800DB496A /* LoginDetailTableViewCell.swift in Sources */,
 				B1E9D22C23AC841800FF0F60 /* SignUp_2Router.swift in Sources */,
 				B1E4337223B0872000900FFF /* Login_6Models.swift in Sources */,
 				B1B0895C23AB78FB008E2472 /* SignUp_1Models.swift in Sources */,
+				B128E38923B624A7007A91D5 /* SignUp_9ViewController.swift in Sources */,
 				B11DC5F123AE211F00DB496A /* LoginButtonTableViewCell.swift in Sources */,
 				B1E433B123B0BFB300900FFF /* SignUp_8Interactor.swift in Sources */,
 				B1B0893F23AB78BF008E2472 /* AppDelegate.swift in Sources */,
@@ -600,7 +638,9 @@
 				B1E9D22F23AC841800FF0F60 /* SignUp_2Interactor.swift in Sources */,
 				B11DC5FB23AE229400DB496A /* Login_5Router.swift in Sources */,
 				B11DC5FC23AE229400DB496A /* Login_5Models.swift in Sources */,
+				B128E37D23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift in Sources */,
 				B1E9D22B23AC841800FF0F60 /* SignUp_2Worker.swift in Sources */,
+				B128E38A23B624A7007A91D5 /* SignUp_9Interactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

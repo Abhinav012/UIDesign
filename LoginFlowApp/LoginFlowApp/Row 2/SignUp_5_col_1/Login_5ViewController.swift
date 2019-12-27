@@ -27,9 +27,14 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
     
     @IBOutlet weak var signUpMenuBtn: UIButton!
     @IBOutlet weak var signInMenuBtn: UIButton!
+    
+    
+    
+    @IBOutlet weak var tableViewHeightConst: NSLayoutConstraint!
+    @IBOutlet weak var credentialViewHeightConst: NSLayoutConstraint!
     @IBOutlet weak var credentialsTableView: UITableView!
     @IBOutlet weak var logoImageView: UIImageView!
-    
+    @IBOutlet weak var signInSignUpSegCtrl: UISegmentedControl!
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -87,6 +92,9 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
     }
     logoImageView.layer.cornerRadius = logoImageView.frame.width/2
     UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
+    signInSignUpSegCtrl.removeBorders()
+    signInSignUpSegCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .selected)
+    signInSignUpSegCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.lightGray], for: .normal)
     doSomething()
   }
     override func viewDidAppear(_ animated: Bool) {
@@ -128,10 +136,32 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
         signInMenuBtn.setTitleColor(UIColor.black, for: .normal)
         signInMenuBtn.backgroundColor = UIColor.white
         
-        credentialsPlaceHolders = []
+        credentialsPlaceHolders = ["Email", "Sign In"]
         credentialsTableView.reloadData()
     }
     
+    @IBAction func didChangeStateOnTap(_ sender: UISegmentedControl) {
+       if signInSignUpSegCtrl.selectedSegmentIndex == 0 {
+        UIView.animate(withDuration: 0.3) {
+            self.credentialViewHeightConst.constant = 461
+            self.tableViewHeightConst.constant = 393
+            self.view.layoutIfNeeded()
+        }
+            self.credentialsPlaceHolders =
+                ["First Name", "Last Name", "Email", "Password", "Re-enter Password", "Create An Account", "Sign Up with Facebook"]
+            self.credentialsTableView.reloadData()
+        }
+       else{
+        UIView.animate(withDuration: 0) {
+            self.credentialViewHeightConst.constant = 461 - 56*4
+            self.tableViewHeightConst.constant = 393 - 56*4
+            self.credentialsPlaceHolders = ["Email", "Password","Sign In"]
+            self.credentialsTableView.reloadData()
+            self.view.layoutIfNeeded()
+        }
+        
+        }
+    }
     
 }
 
@@ -141,6 +171,8 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if signInSignUpSegCtrl.selectedSegmentIndex == 0{
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! LoginDetailTableViewCell
         
         if indexPath.row >= 0 && indexPath.row <= 4{
@@ -153,6 +185,18 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 6{
             cell2.logButton.backgroundColor = UIColor.appFacebookBckgrd
         }
+        
+        return cell2
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! LoginDetailTableViewCell
+        
+        if indexPath.row == 0 || indexPath.row == 1{
+            cell.detailTextField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
+            return cell
+        }
+        let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell") as! LoginButtonTableViewCell
+        cell2.logButton.setTitle(credentialsPlaceHolders[indexPath.row], for: .normal)
+        
         
         return cell2
     }
