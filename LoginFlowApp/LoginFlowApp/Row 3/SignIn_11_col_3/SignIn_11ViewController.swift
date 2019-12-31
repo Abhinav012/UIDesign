@@ -82,6 +82,9 @@ class SignIn_11ViewController: UIViewController, SignIn_11DisplayLogic
   {
     super.viewDidLoad()
     setupUI()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     doSomething()
   }
   
