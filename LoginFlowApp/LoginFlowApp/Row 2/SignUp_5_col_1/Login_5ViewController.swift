@@ -177,6 +177,10 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.row >= 0 && indexPath.row <= 4{
         cell.detailTextField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
+            if indexPath.row>=3{
+                cell.detailTextField.textContentType = .password
+                cell.detailTextField.isSecureTextEntry = true
+            }
         return cell
         }
          let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell") as! LoginButtonTableViewCell
@@ -190,8 +194,14 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! LoginDetailTableViewCell
         
-        if indexPath.row == 0 || indexPath.row == 1{
+        if indexPath.row == 0 {
             cell.detailTextField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
+            return cell
+        }
+        if  indexPath.row == 1{
+            cell.detailTextField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
+            cell.detailTextField.textContentType = .password
+            cell.detailTextField.isSecureTextEntry = true
             return cell
         }
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell") as! LoginButtonTableViewCell

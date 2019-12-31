@@ -145,6 +145,11 @@ extension Login_6ViewController : UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.row >= 0 && indexPath.row <= 4{
             cell.credentialTxtField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
+            if indexPath.row>=3{
+                cell.credentialTxtField.textContentType = .password
+                cell.credentialTxtField.isSecureTextEntry = true
+            }
+            
             return cell
         }
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "login_6Button") as! LoginButton_6TableViewCell
@@ -158,6 +163,10 @@ extension Login_6ViewController : UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.row == 0 || indexPath.row == 1{
             cell.credentialTxtField.placeholder = "   " + credentialsPlaceHolders[indexPath.row]
+            if indexPath.row == 1{
+            cell.credentialTxtField.textContentType = .password
+            cell.credentialTxtField.isSecureTextEntry = true
+            }
             return cell
         }
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "login_6Button") as! LoginButton_6TableViewCell

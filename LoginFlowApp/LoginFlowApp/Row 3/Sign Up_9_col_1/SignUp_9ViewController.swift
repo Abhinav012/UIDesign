@@ -23,6 +23,14 @@ class SignUp_9ViewController: UIViewController, SignUp_9DisplayLogic
   var router: (NSObjectProtocol & SignUp_9RoutingLogic & SignUp_9DataPassing)?
 
     @IBOutlet weak var credentialView: UIView!
+    @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var navBarView: UIView!
+    @IBOutlet weak var uploadImgButton: UIButton!
+
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
     // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -71,8 +79,16 @@ class SignUp_9ViewController: UIViewController, SignUp_9DisplayLogic
   {
     super.viewDidLoad()
     setupUI()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     doSomething()
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barStyle = .black
+    }
   
     
   // MARK: Do something
@@ -94,5 +110,12 @@ class SignUp_9ViewController: UIViewController, SignUp_9DisplayLogic
         credentialView.layer.shadowColor = UIColor.lightGray.cgColor
         credentialView.layer.shadowOffset = CGSize(width: 1, height: 1)
         credentialView.layer.shadowOpacity  = 1.0
+        
+        uploadImgButton.layer.cornerRadius = uploadImgButton.frame.width/2
+        
+        createAccountButton.backgroundColor = .appRed
+        navBarView.backgroundColor = .appRed
+        
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.appStatusBarRed
     }
 }
