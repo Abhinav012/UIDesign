@@ -152,14 +152,8 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
             self.credentialsTableView.reloadData()
         }
        else{
-        UIView.animate(withDuration: 0) {
-            self.credentialViewHeightConst.constant = 461 - 56*4
-            self.tableViewHeightConst.constant = 393 - 56*4
-            self.credentialsPlaceHolders = ["Email", "Password","Sign In"]
+            self.credentialsPlaceHolders = ["User Name", "Password","Sign In"]
             self.credentialsTableView.reloadData()
-            self.view.layoutIfNeeded()
-        }
-        
         }
     }
     
@@ -167,6 +161,11 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
 
 extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if signInSignUpSegCtrl.selectedSegmentIndex == 1 {
+        return credentialsPlaceHolders.count + 2
+        }
+        
         return credentialsPlaceHolders.count
     }
     
@@ -204,14 +203,32 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
             cell.detailTextField.isSecureTextEntry = true
             return cell
         }
+        if indexPath.row == 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "optionsCell", for: indexPath)
+            return cell
+        }
+        if indexPath.row == 4{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "signUpCell", for: indexPath)
+            return cell
+        }
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell") as! LoginButtonTableViewCell
-        cell2.logButton.setTitle(credentialsPlaceHolders[indexPath.row], for: .normal)
+        cell2.logButton.setTitle(credentialsPlaceHolders[indexPath.row-1], for: .normal)
         
         
         return cell2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if signInSignUpSegCtrl.selectedSegmentIndex == 1 {
+          
+            if indexPath.row == 2{
+                return 40
+            }
+            if indexPath.row == 4{
+                return 54
+            }
+        }
+        
         return 56
     }
 }

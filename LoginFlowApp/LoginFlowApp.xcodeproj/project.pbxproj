@@ -36,6 +36,19 @@
 		B128E38823B624A7007A91D5 /* SignUp_9Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38223B624A7007A91D5 /* SignUp_9Models.swift */; };
 		B128E38923B624A7007A91D5 /* SignUp_9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38323B624A7007A91D5 /* SignUp_9ViewController.swift */; };
 		B128E38A23B624A7007A91D5 /* SignUp_9Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E38423B624A7007A91D5 /* SignUp_9Interactor.swift */; };
+		B140873D23BDBBA2003E7C0D /* SignIn_12Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140873723BDBBA2003E7C0D /* SignIn_12Presenter.swift */; };
+		B140873E23BDBBA2003E7C0D /* SignIn_12Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140873823BDBBA2003E7C0D /* SignIn_12Worker.swift */; };
+		B140873F23BDBBA2003E7C0D /* SignIn_12Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140873923BDBBA2003E7C0D /* SignIn_12Router.swift */; };
+		B140874023BDBBA2003E7C0D /* SignIn_12Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140873A23BDBBA2003E7C0D /* SignIn_12Models.swift */; };
+		B140874123BDBBA2003E7C0D /* SignIn_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140873B23BDBBA2003E7C0D /* SignIn_12ViewController.swift */; };
+		B140874223BDBBA2003E7C0D /* SignIn_12Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140873C23BDBBA2003E7C0D /* SignIn_12Interactor.swift */; };
+		B140874523BDC912003E7C0D /* LightBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874423BDC912003E7C0D /* LightBorderTextField.swift */; };
+		B140874D23BDE2EA003E7C0D /* SignIn13Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874723BDE2EA003E7C0D /* SignIn13Presenter.swift */; };
+		B140874E23BDE2EA003E7C0D /* SignIn13Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874823BDE2EA003E7C0D /* SignIn13Worker.swift */; };
+		B140874F23BDE2EA003E7C0D /* SignIn13Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874923BDE2EA003E7C0D /* SignIn13Router.swift */; };
+		B140875023BDE2EA003E7C0D /* SignIn13Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874A23BDE2EA003E7C0D /* SignIn13Models.swift */; };
+		B140875123BDE2EA003E7C0D /* SignIn13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874B23BDE2EA003E7C0D /* SignIn13ViewController.swift */; };
+		B140875223BDE2EA003E7C0D /* SignIn13Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140874C23BDE2EA003E7C0D /* SignIn13Interactor.swift */; };
 		B14EB66023B756780068CF9D /* SignUp_10Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EB65A23B756780068CF9D /* SignUp_10Presenter.swift */; };
 		B14EB66123B756780068CF9D /* SignUp_10Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EB65B23B756780068CF9D /* SignUp_10Worker.swift */; };
 		B14EB66223B756780068CF9D /* SignUp_10Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EB65C23B756780068CF9D /* SignUp_10Router.swift */; };
@@ -134,6 +147,19 @@
 		B128E38223B624A7007A91D5 /* SignUp_9Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Models.swift; sourceTree = "<group>"; };
 		B128E38323B624A7007A91D5 /* SignUp_9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9ViewController.swift; sourceTree = "<group>"; };
 		B128E38423B624A7007A91D5 /* SignUp_9Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Interactor.swift; sourceTree = "<group>"; };
+		B140873723BDBBA2003E7C0D /* SignIn_12Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_12Presenter.swift; sourceTree = "<group>"; };
+		B140873823BDBBA2003E7C0D /* SignIn_12Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_12Worker.swift; sourceTree = "<group>"; };
+		B140873923BDBBA2003E7C0D /* SignIn_12Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_12Router.swift; sourceTree = "<group>"; };
+		B140873A23BDBBA2003E7C0D /* SignIn_12Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_12Models.swift; sourceTree = "<group>"; };
+		B140873B23BDBBA2003E7C0D /* SignIn_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_12ViewController.swift; sourceTree = "<group>"; };
+		B140873C23BDBBA2003E7C0D /* SignIn_12Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_12Interactor.swift; sourceTree = "<group>"; };
+		B140874423BDC912003E7C0D /* LightBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBorderTextField.swift; sourceTree = "<group>"; };
+		B140874723BDE2EA003E7C0D /* SignIn13Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn13Presenter.swift; sourceTree = "<group>"; };
+		B140874823BDE2EA003E7C0D /* SignIn13Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn13Worker.swift; sourceTree = "<group>"; };
+		B140874923BDE2EA003E7C0D /* SignIn13Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn13Router.swift; sourceTree = "<group>"; };
+		B140874A23BDE2EA003E7C0D /* SignIn13Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn13Models.swift; sourceTree = "<group>"; };
+		B140874B23BDE2EA003E7C0D /* SignIn13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn13ViewController.swift; sourceTree = "<group>"; };
+		B140874C23BDE2EA003E7C0D /* SignIn13Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn13Interactor.swift; sourceTree = "<group>"; };
 		B14EB65A23B756780068CF9D /* SignUp_10Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_10Presenter.swift; sourceTree = "<group>"; };
 		B14EB65B23B756780068CF9D /* SignUp_10Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_10Worker.swift; sourceTree = "<group>"; };
 		B14EB65C23B756780068CF9D /* SignUp_10Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_10Router.swift; sourceTree = "<group>"; };
@@ -228,6 +254,7 @@
 				B128E37E23B62461007A91D5 /* Sign Up_9_col_1 */,
 				B14EB65923B756520068CF9D /* SignUp_10_col_2 */,
 				B14EB66623B76BAB0068CF9D /* SignIn_11_col_3 */,
+				B140873623BDBB55003E7C0D /* SignIn_12_col_4 */,
 			);
 			path = "Row 3";
 			sourceTree = "<group>";
@@ -296,6 +323,49 @@
 			path = "Sign Up_9_col_1";
 			sourceTree = "<group>";
 		};
+		B140873623BDBB55003E7C0D /* SignIn_12_col_4 */ = {
+			isa = PBXGroup;
+			children = (
+				B140873723BDBBA2003E7C0D /* SignIn_12Presenter.swift */,
+				B140873823BDBBA2003E7C0D /* SignIn_12Worker.swift */,
+				B140873923BDBBA2003E7C0D /* SignIn_12Router.swift */,
+				B140873A23BDBBA2003E7C0D /* SignIn_12Models.swift */,
+				B140873B23BDBBA2003E7C0D /* SignIn_12ViewController.swift */,
+				B140873C23BDBBA2003E7C0D /* SignIn_12Interactor.swift */,
+			);
+			path = SignIn_12_col_4;
+			sourceTree = "<group>";
+		};
+		B140874323BDC859003E7C0D /* Row 4 */ = {
+			isa = PBXGroup;
+			children = (
+				B140874423BDC912003E7C0D /* LightBorderTextField.swift */,
+				B140874623BDE29E003E7C0D /* SignIn13_col_1 */,
+				B140875323BDE7DC003E7C0D /* New Group */,
+			);
+			path = "Row 4";
+			sourceTree = "<group>";
+		};
+		B140874623BDE29E003E7C0D /* SignIn13_col_1 */ = {
+			isa = PBXGroup;
+			children = (
+				B140874723BDE2EA003E7C0D /* SignIn13Presenter.swift */,
+				B140874823BDE2EA003E7C0D /* SignIn13Worker.swift */,
+				B140874923BDE2EA003E7C0D /* SignIn13Router.swift */,
+				B140874A23BDE2EA003E7C0D /* SignIn13Models.swift */,
+				B140874B23BDE2EA003E7C0D /* SignIn13ViewController.swift */,
+				B140874C23BDE2EA003E7C0D /* SignIn13Interactor.swift */,
+			);
+			path = SignIn13_col_1;
+			sourceTree = "<group>";
+		};
+		B140875323BDE7DC003E7C0D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B14EB65923B756520068CF9D /* SignUp_10_col_2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +417,7 @@
 				B1E4336623B0771500900FFF /* Row 1 */,
 				B1E4336723B0776900900FFF /* Row 2 */,
 				B113FE2323B1D75E00450997 /* Row 3 */,
+				B140874323BDC859003E7C0D /* Row 4 */,
 				B1B0893E23AB78BF008E2472 /* AppDelegate.swift */,
 				B1B0894823AB78C0008E2472 /* Assets.xcassets */,
 				B1B0894A23AB78C0008E2472 /* LaunchScreen.storyboard */,
@@ -625,15 +696,20 @@
 				B1E9D22A23AC841800FF0F60 /* SignUp_2Presenter.swift in Sources */,
 				B1B0894723AB78BF008E2472 /* LoginFlowApp.xcdatamodeld in Sources */,
 				B14EB66123B756780068CF9D /* SignUp_10Worker.swift in Sources */,
+				B140874F23BDE2EA003E7C0D /* SignIn13Router.swift in Sources */,
 				B1B0895D23AB78FB008E2472 /* SignUp_1ViewController.swift in Sources */,
 				B14EB66523B756780068CF9D /* SignUp_10Interactor.swift in Sources */,
 				B128E38523B624A7007A91D5 /* SignUp_9Presenter.swift in Sources */,
 				B128E38723B624A7007A91D5 /* SignUp_9Router.swift in Sources */,
 				B1E4337723B08E8A00900FFF /* Welcome2ViewController.swift in Sources */,
 				B1E4339C23B0906100900FFF /* SignUp_7ViewController.swift in Sources */,
+				B140874D23BDE2EA003E7C0D /* SignIn13Presenter.swift in Sources */,
+				B140873D23BDBBA2003E7C0D /* SignIn_12Presenter.swift in Sources */,
 				B128E37B23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift in Sources */,
 				B11DC5DA23ADE55900DB496A /* SignIn_4Presenter.swift in Sources */,
+				B140874023BDBBA2003E7C0D /* SignIn_12Models.swift in Sources */,
 				B1E433B023B0BFB300900FFF /* SignUp_8ViewController.swift in Sources */,
+				B140874523BDC912003E7C0D /* LightBorderTextField.swift in Sources */,
 				B11DC5D223ADE52A00DB496A /* SignUp_4Interactor.swift in Sources */,
 				B1E4338023B08FDB00900FFF /* SignIn_7Router.swift in Sources */,
 				B1E4338323B08FDB00900FFF /* SignIn_7Interactor.swift in Sources */,
@@ -659,6 +735,7 @@
 				B11DC5DD23ADE55900DB496A /* SignIn_4Models.swift in Sources */,
 				B1E4339B23B0906100900FFF /* SignUp_7Models.swift in Sources */,
 				B11DC5FE23AE229400DB496A /* Login_5Interactor.swift in Sources */,
+				B140874E23BDE2EA003E7C0D /* SignIn13Worker.swift in Sources */,
 				B1E4337023B0872000900FFF /* Login_6Worker.swift in Sources */,
 				B1B0895A23AB78FB008E2472 /* SignUp_1Worker.swift in Sources */,
 				B1E4337123B0872000900FFF /* Login_6Router.swift in Sources */,
@@ -667,14 +744,18 @@
 				B11DC5DB23ADE55900DB496A /* SignIn_4Worker.swift in Sources */,
 				B1E4338123B08FDB00900FFF /* SignIn_7Models.swift in Sources */,
 				B1B0895923AB78FB008E2472 /* SignUp_1Presenter.swift in Sources */,
+				B140874223BDBBA2003E7C0D /* SignIn_12Interactor.swift in Sources */,
 				B128E38823B624A7007A91D5 /* SignUp_9Models.swift in Sources */,
+				B140875023BDE2EA003E7C0D /* SignIn13Models.swift in Sources */,
 				B1B0895B23AB78FB008E2472 /* SignUp_1Router.swift in Sources */,
 				B14EB66323B756780068CF9D /* SignUp_10Models.swift in Sources */,
 				B14EB66D23B76BE10068CF9D /* SignIn_11Presenter.swift in Sources */,
+				B140874123BDBBA2003E7C0D /* SignIn_12ViewController.swift in Sources */,
 				B1E9D24123ACE5BC00FF0F60 /* SignUp_3Interactor.swift in Sources */,
 				B11DC5EF23AE20E800DB496A /* LoginDetailTableViewCell.swift in Sources */,
 				B14EB67123B76BE10068CF9D /* SignIn_11ViewController.swift in Sources */,
 				B1E9D22C23AC841800FF0F60 /* SignUp_2Router.swift in Sources */,
+				B140875123BDE2EA003E7C0D /* SignIn13ViewController.swift in Sources */,
 				B1E4337223B0872000900FFF /* Login_6Models.swift in Sources */,
 				B1B0895C23AB78FB008E2472 /* SignUp_1Models.swift in Sources */,
 				B14EB66F23B76BE10068CF9D /* SignIn_11Router.swift in Sources */,
@@ -682,9 +763,11 @@
 				B11DC5F123AE211F00DB496A /* LoginButtonTableViewCell.swift in Sources */,
 				B1E433B123B0BFB300900FFF /* SignUp_8Interactor.swift in Sources */,
 				B14EB66023B756780068CF9D /* SignUp_10Presenter.swift in Sources */,
+				B140875223BDE2EA003E7C0D /* SignIn13Interactor.swift in Sources */,
 				B1B0893F23AB78BF008E2472 /* AppDelegate.swift in Sources */,
 				B1E9D23F23ACE5BC00FF0F60 /* SignUp_3Models.swift in Sources */,
 				B1E9D23523ACCDD200FF0F60 /* SignUpTextField.swift in Sources */,
+				B140873E23BDBBA2003E7C0D /* SignIn_12Worker.swift in Sources */,
 				B1E433AE23B0BFB300900FFF /* SignUp_8Router.swift in Sources */,
 				B1E433AC23B0BFB300900FFF /* SignUp_8Presenter.swift in Sources */,
 				B1E9D22E23AC841800FF0F60 /* SignUp_2ViewController.swift in Sources */,
@@ -693,6 +776,7 @@
 				B1E4336F23B0872000900FFF /* Login_6Presenter.swift in Sources */,
 				B1E4338223B08FDB00900FFF /* SignIn_7ViewController.swift in Sources */,
 				B14EB66E23B76BE10068CF9D /* SignIn_11Worker.swift in Sources */,
+				B140873F23BDBBA2003E7C0D /* SignIn_12Router.swift in Sources */,
 				B1E4337F23B08FDB00900FFF /* SignIn_7Worker.swift in Sources */,
 				B1E9D24023ACE5BC00FF0F60 /* SignUp_3ViewController.swift in Sources */,
 				B1E433AF23B0BFB300900FFF /* SignUp_8Models.swift in Sources */,
