@@ -13,7 +13,7 @@ class LoginButton_6TableViewCell: UITableViewCell {
     @IBOutlet weak var signUpsignInButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        signUpsignInButton.backgroundColor = .appRed
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

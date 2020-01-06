@@ -93,8 +93,10 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
     logoImageView.layer.cornerRadius = logoImageView.frame.width/2
     UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     signInSignUpSegCtrl.removeBorders()
-    signInSignUpSegCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .selected)
-    signInSignUpSegCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.lightGray], for: .normal)
+    signInSignUpSegCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black, NSAttributedString.Key.font
+        : UIFont.boldSystemFont(ofSize: 14)], for: .selected)
+    signInSignUpSegCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.lightGray,NSAttributedString.Key.font
+        : UIFont.boldSystemFont(ofSize: 14)], for: .normal)
     doSomething()
   }
     override func viewDidAppear(_ animated: Bool) {
@@ -152,6 +154,12 @@ class Login_5ViewController: UIViewController, Login_5DisplayLogic
             self.credentialsTableView.reloadData()
         }
        else{
+        UIView.animate(withDuration: 0.3) {
+            self.credentialViewHeightConst.constant = 461 + 4
+            self.tableViewHeightConst.constant = 393
+            self.view.layoutIfNeeded()
+        }
+        
             self.credentialsPlaceHolders = ["User Name", "Password","Sign In"]
             self.credentialsTableView.reloadData()
         }
@@ -163,7 +171,7 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if signInSignUpSegCtrl.selectedSegmentIndex == 1 {
-        return credentialsPlaceHolders.count + 2
+        return credentialsPlaceHolders.count + 4
         }
         
         return credentialsPlaceHolders.count
@@ -211,6 +219,14 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "signUpCell", for: indexPath)
             return cell
         }
+        if indexPath.row == 5{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "placeholderImageCell", for: indexPath)
+            return cell
+        }
+        if indexPath.row == 6{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "fbCell", for: indexPath)
+            return cell
+        }
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "buttonCell") as! LoginButtonTableViewCell
         cell2.logButton.setTitle(credentialsPlaceHolders[indexPath.row-1], for: .normal)
         
@@ -225,7 +241,13 @@ extension Login_5ViewController: UITableViewDelegate, UITableViewDataSource{
                 return 40
             }
             if indexPath.row == 4{
-                return 54
+                return 60
+            }
+            if indexPath.row == 5{
+                return 60
+            }
+            if indexPath.row == 6{
+                return 60
             }
         }
         

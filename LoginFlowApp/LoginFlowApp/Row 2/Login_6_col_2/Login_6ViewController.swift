@@ -22,10 +22,17 @@ class Login_6ViewController: UIViewController, Login_6DisplayLogic
   var interactor: Login_6BusinessLogic?
   var router: (NSObjectProtocol & Login_6RoutingLogic & Login_6DataPassing)?
 
+    var doRememberMe: Bool = false
+    
     @IBOutlet weak var createAnAccount: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var signUpSignInSegmentedCtrl: UISegmentedControl!
     @IBOutlet weak var credentialsTableView: UITableView!
+    
+    
+    @IBOutlet weak var signInView: UIView!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var rememberMeButton: UIButton!
     
     @IBOutlet weak var termsAlertLabel: UILabel!
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -100,6 +107,9 @@ class Login_6ViewController: UIViewController, Login_6DisplayLogic
         signUpSignInSegmentedCtrl.tintColor = UIColor.clear
         signUpSignInSegmentedCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)], for: .selected)
         signUpSignInSegmentedCtrl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.lightGray, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)], for: .normal)
+        
+        signInView.isHidden = true
+        signInButton.backgroundColor = .appRed
     }
     
     
@@ -117,17 +127,36 @@ class Login_6ViewController: UIViewController, Login_6DisplayLogic
   {
     //nameTextField.text = viewModel.name
   }
-    
+    // MARK: IBAction
     @IBAction func didTapOnSegmentedCtrl(_ sender: Any) {
         if signUpSignInSegmentedCtrl.selectedSegmentIndex == 0{
             credentialsPlaceHolders = ["First Name", "Last Name", "Email", "Password", "Re-enter Password", "Create An Account"]
             termsAlertLabel.isHidden = false
+            signInView.isHidden = true
+            userImageView.isHidden = false
+            self.credentialsTableView.reloadData()
         }
         else{
-            credentialsPlaceHolders = ["User Name", "Password", "Sign In"]
+            signInView.isHidden = false
+            userImageView.isHidden = true
             termsAlertLabel.isHidden = true
         }
-        self.credentialsTableView.reloadData()
+        
+    }
+
+    @IBAction func rememberMeTapped(_ sender: Any) {
+         doRememberMe.toggle()
+        
+        var imgName = ""
+        
+        if doRememberMe{
+            imgName = "checked_box"
+        }else{
+            imgName = "unchecked_box"
+        }
+        
+        rememberMeButton.setImage(UIImage(named: imgName), for: .normal)
+        
     }
     
     

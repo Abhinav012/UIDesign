@@ -40,9 +40,14 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var signInLbl: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var userNameTxtField: UITextField!
     @IBOutlet weak var signInPasswordTxtField: UITextField!
+    @IBOutlet weak var rememberMeBtn: UIButton!
+    @IBOutlet weak var rememberMeLbl: UILabel!
+    @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInWithfbBtn: UIButton!
     
     
     @IBOutlet weak var signUplbl: UILabel!
