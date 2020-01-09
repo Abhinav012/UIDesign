@@ -79,6 +79,9 @@ class SignIn18ViewController: UIViewController, SignIn18DisplayLogic
   {
     super.viewDidLoad()
     setupUI()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     doSomething()
   }
     

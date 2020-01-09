@@ -72,6 +72,9 @@ class Log21ViewController: UIViewController, Log21DisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    if self.revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     doSomething()
   }
   
@@ -98,27 +101,47 @@ extension Log21ViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collCell", for: indexPath) as! LogCollectionViewCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collSignInCell", for: indexPath) as! LogCollectionViewSignInCell
         
     cell.containerView.layer.shadowColor = UIColor.lightGray.cgColor
     cell.containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
     cell.containerView.layer.shadowOpacity = 1.0
         
-        if indexPath.row == 0{
-            cell.logImageView.image = UIImage(named: "diamond-on-black")
-            cell.signUpSignInButton.setTitle("Sign In", for: .normal)
+    cell.logImageView.layer.cornerRadius = cell.logImageView.frame.width/2
+    
+    cell.signUpSignInButton.backgroundColor = UIColor.appRed
+        
+//        if indexPath.row == 0{
+//            cell.logImageView.image = UIImage(named: "diamond-on-black")
+//            cell.signUpSignInButton.setTitle("Sign In", for: .normal)
+//        }
+//        else {
+//            cell.logImageView.tintColor = UIColor.appBackground
+//            cell.logImageView.image = UIImage(named: "user")
+//            cell.signUpSignInButton.setTitle("Sign Up", for: .normal)
+//        }
+        if indexPath.row == 1{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collSignUpCell", for: indexPath) as! LogCollectionViewSignUpCell
+            
+            cell.containerView.layer.shadowColor = UIColor.lightGray.cgColor
+            cell.containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
+            cell.containerView.layer.shadowOpacity = 1.0
+            
+            cell.uploadImage.tintColor = UIColor.appBackground
+            cell.uploadImage.layer.cornerRadius = cell.uploadImage.frame.width/2
+            
+            cell.signUpButton.backgroundColor = UIColor.appRed
+            
+            return cell
         }
-        else {
-            cell.logImageView.image = UIImage(named: "user")
-            cell.signUpSignInButton.setTitle("Sign Up", for: .normal)
-        }
+        
         
     return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: self.view.frame.width-5, height: UIScreen.main.bounds.height/2)
+        return CGSize(width: self.view.frame.width, height: (UIApplication.shared.keyWindow?.frame.height)!/2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

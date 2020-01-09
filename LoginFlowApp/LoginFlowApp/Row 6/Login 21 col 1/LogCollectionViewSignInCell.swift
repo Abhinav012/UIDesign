@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogCollectionViewCell: UICollectionViewCell {
+class LogCollectionViewSignInCell: UICollectionViewCell {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var logImageView: UIImageView!

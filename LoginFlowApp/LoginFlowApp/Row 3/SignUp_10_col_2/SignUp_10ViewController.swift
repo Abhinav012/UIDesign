@@ -23,6 +23,7 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
   var router: (NSObjectProtocol & SignUp_10RoutingLogic & SignUp_10DataPassing)?
   var position: CGPoint?
   var originalSignInViewRect: CGRect?
+  var originalSignUpViewRect: CGRect?
   var aspectRatio: CGFloat?
 
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -111,6 +112,7 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
     }
     setupUI()
     originalSignInViewRect = signInView.frame
+    originalSignUpViewRect = credentialsView.frame
     doSomething()
   }
     
@@ -153,6 +155,7 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
         backgroundImageView.frame = containerView.frame
         
         setupSignInView()
+        credentialsView.frame = CGRect(x: 9, y: 70, width: self.containerView.frame.width-2*9, height: 475)
         setupSignUpView()
         
         aspectRatio = credentialsView.frame.width/credentialsView.frame.height
@@ -160,9 +163,18 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
         let panGesture2 = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
         //panGesture.delegate = self
-        self.signInView.addGestureRecognizer(panGesture)
-        self.credentialsView.addGestureRecognizer(panGesture2)
+            self.signInView.addGestureRecognizer(panGesture)
+            self.credentialsView.addGestureRecognizer(panGesture2)
         
+        signInView.tag = 1
+        credentialsView.tag = 0
+//
+//
+//        let transistion = CATransition()
+//        transistion.type = .reveal
+//        transistion.subtype = CATransitionSubtype.fromTop
+//        transistion.duration = 0.3
+//         self.containerView.layer.add(transistion, forKey: nil)
         
        
     }
@@ -170,13 +182,23 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
     func setupSignInView(){
         signInView.frame = CGRect(x: 21.5, y: 40, width: self.view.frame.width-2*21.5, height: 441.5)
         signInLbl.frame = CGRect(x: 0, y: 0, width: signInView.frame.width, height: 63)
-        userNameTxtField.frame = CGRect(x: 13, y: 63, width: signInView.frame.width-2*13, height: 44)
-        signInPasswordTxtField.frame = CGRect(x: 13, y: 120, width: signInView.frame.width-2*13, height: 44)
-        signInButton.frame = CGRect(x: 13, y: 177, width: signInView.frame.width-2*13, height: 44)
+
+        logoImageView.layer.cornerRadius = logoImageView.frame.width/2
+        logoImageView.clipsToBounds = true
+        logoImageView.frame = CGRect(x: (self.signInView.frame.width-90)/2, y: 55, width: 90, height: 90)
+        
+        userNameTxtField.frame = CGRect(x: 13, y: 170, width: signInView.frame.width-26, height: 44)
+        
+        signInPasswordTxtField.frame = CGRect(x: 13, y: 227, width: signInView.frame.width-26, height: 44)
+        
+        rememberMeBtn.frame = CGRect(x: 11.5, y: 300, width: 17, height: 17)
+        rememberMeLbl.frame = CGRect(x: 32.5, y: 298, width: 112, height: 21)
+        forgotPassword.frame = CGRect(x: signInPasswordTxtField.frame.origin.x+signInPasswordTxtField.frame.width-137, y: 298, width: 137, height: 21)
+        
+
     }
     
     func setupSignUpView(){
-        credentialsView.frame = CGRect(x: 9, y: 70, width: self.view.frame.width-2*9, height: 475)
         signUplbl.frame = CGRect(x: 0, y: 0, width: credentialsView.frame.width, height: 63)
         firstnameTxtField.frame = CGRect(x: 13, y: 63, width: credentialsView.frame.width-2*13, height: 44)
         lastNameTxtField.frame = CGRect(x: 13, y: 120, width: credentialsView.frame.width-2*13, height: 44)
@@ -190,90 +212,179 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
     @objc func didPan(_ sender: UIPanGestureRecognizer){
         
         let initialPosY = signInView.frame.origin.y
+        let intiallPosY2 = self.credentialsView.frame.origin.y
         let translation = sender.translation(in: self.view)
         
       switch sender.state {
         case .began, .changed:
-           
-                print(initialPosY < (initialPosY + translation.y))
-           
+            
+            DispatchQueue.main.async {
                 
-                if signInView.frame.width <= 357 && signInView.frame.width >= (originalSignInViewRect?.width)! {
-                    signInView.frame = CGRect(x: signInView.frame.origin.x - (signInView.frame.origin.x/signInView.frame.origin.y)*translation.y, y: signInView.frame.origin.y + translation.y, width: (signInView.frame.height + translation.y)*(originalSignInViewRect?.width)!/(originalSignInViewRect?.height)!, height: signInView.frame.height+translation.y)
+            
+            
+                print(initialPosY < (initialPosY + translation.y))
+                if sender.view!.tag == 0 {
                     
-                    signInLbl.frame = CGRect(x: signInLbl.frame.origin.x, y: signInLbl.frame.origin.y, width: signInView.frame.width, height: signInLbl.frame.height)
-                    userNameTxtField.frame = CGRect(x: userNameTxtField.frame.origin.x, y: userNameTxtField.frame.origin.y, width: signInView.frame.width-26, height: userNameTxtField.frame.height)
-                    signInPasswordTxtField.frame = CGRect(x: signInPasswordTxtField.frame.origin.x, y: signInPasswordTxtField.frame.origin.y, width: signInView.frame.width-26, height: signInPasswordTxtField.frame.height)
-                    signInButton.frame = CGRect(x: signInButton.frame.origin.x, y: signInButton.frame.origin.y, width: signInView.frame.width-26, height: signInButton.frame.height)
-                   
+
+                    self.signInView.frame = CGRect(x: self.signInView.frame.origin.x - (self.signInView.frame.origin.x/self.signInView.frame.origin.y)*translation.y*30/475, y: self.signInView.frame.origin.y + translation.y*30/475, width: (self.signInView.frame.height + translation.y*30/475)*(self.originalSignInViewRect?.width)!/(self.originalSignInViewRect?.height)!, height: self.signInView.frame.height+translation.y*30/475)
                     
+                    self.credentialsView.frame.origin.y += translation.y
+                    
+
+                    self.signInLbl.frame = CGRect(x: self.signInLbl.frame.origin.x, y: self.signInLbl.frame.origin.y, width: self.signInView.frame.width, height: self.signInLbl.frame.height)
+
+                    self.logoImageView.frame = CGRect(x: (self.signInView.frame.width-90)/2, y: 71+translation.y/2*30/475, width: 90, height: 90)
+
+                    self.userNameTxtField.frame = CGRect(x: self.userNameTxtField.frame.origin.x, y: self.userNameTxtField.frame.origin.y+translation.y/2*30/475, width: self.signInView.frame.width-26, height: self.userNameTxtField.frame.height)
+
+                    self.signInPasswordTxtField.frame = CGRect(x: self.signInPasswordTxtField.frame.origin.x, y: self.signInPasswordTxtField.frame.origin.y+translation.y/2*30/475, width: self.signInView.frame.width-26, height: self.signInPasswordTxtField.frame.height)
+
+                    self.rememberMeBtn.frame = CGRect(x: 11.5, y: 290+translation.y*30/475, width: 17, height: 17)
+                    self.rememberMeLbl.frame = CGRect(x: 32.5, y: 288+translation.y*30/475, width: 112, height: 21)
+                    self.forgotPassword.frame = CGRect(x: self.signInPasswordTxtField.frame.origin.x+self.signInPasswordTxtField.frame.width-137, y: 288+translation.y*30/475, width: 137, height: 21)
+
+                    self.signInButton.frame = CGRect(x: self.signInButton.frame.origin.x, y: self.signInView.frame.height-114, width: self.signInView.frame.width-26, height: self.signInButton.frame.height)
+
+                    self.signInWithfbBtn.frame = CGRect(x: self.signInWithfbBtn.frame.origin.x, y: self.signInView.frame.height-57, width: self.signInView.frame.width-26, height: self.signInWithfbBtn.frame.height)
+
+                    
+
                     if initialPosY < (initialPosY + translation.y){
-                        
-                            credentialsView.alpha -= 0.3
-                            //centerXSignInView.constant = 0
-                            //centerXCredentialsView.constant = 0
-                            signInLbl.alpha = 1
-                            userNameTxtField.alpha = 1
-                            signInButton.alpha = 1
-                            signInPasswordTxtField.alpha = 1
-                        
+                            self.signInLbl.alpha = 1
+                            self.userNameTxtField.alpha = 1
+                            self.signInButton.alpha = 1
+                            self.signInPasswordTxtField.alpha = 1
+
                             self.signInView.layoutIfNeeded()
-                            signInView.backgroundColor = credentialsView.backgroundColor
-                            
+                            self.signInView.backgroundColor = self.credentialsView.backgroundColor
+
                     }
                      if initialPosY > (initialPosY + translation.y){
-                        
-                        credentialsView.alpha += 0.3
-                       // centerXSignInView.constant = 0
-                       // centerXCredentialsView.constant = 0
-                        signInLbl.alpha -= 0.25
-                        userNameTxtField.alpha -= 0.25
-                        signInButton.alpha -= 0.25
-                        signInPasswordTxtField.alpha -= 0.1
+
+                        self.credentialsView.alpha += 0.3
+                        self.signInLbl.alpha -= 0.25
+                        self.userNameTxtField.alpha -= 0.25
+                        self.signInButton.alpha -= 0.25
+                        self.signInPasswordTxtField.alpha -= 0.1
                         self.signInView.layoutIfNeeded()
-                        signInView.backgroundColor = UIColor(red: 237/255, green: 238/255, blue: 239/255, alpha: 1)
+                        self.signInView.backgroundColor = UIColor(red: 237/255, green: 238/255, blue: 239/255, alpha: 1)
                     }
-                    
+
+                    sender.setTranslation(CGPoint.zero, in: self.view)
+               
+                
+                }else{
+                    self.signInView.frame.origin.y += translation.y
+                    self.credentialsView.frame = CGRect(x: self.credentialsView.frame.origin.x - (self.credentialsView.frame.origin.x/self.credentialsView.frame.origin.y)*translation.y*30/475, y: self.credentialsView.frame.origin.y + translation.y*30/475, width: (self.credentialsView.frame.height + translation.y*30/475)*(self.originalSignInViewRect?.width)!/(self.originalSignInViewRect?.height)!, height: self.credentialsView.frame.height+translation.y*30/475)
+                    self.setupSignUpView()
                     sender.setTranslation(CGPoint.zero, in: self.view)
                 }
-                
             
-            
+            }
             break
         case .ended:
             
-            
-             
-            if initialPosY < (initialPosY + translation.y){
-                signInView.frame = credentialsView.frame
-                credentialsView.alpha = 0
+            DispatchQueue.main.async {
                 
-               // centerXSignInView.constant = 0
-               // centerXCredentialsView.constant = 0
-                signInLbl.alpha = 1
-                userNameTxtField.alpha = 1
-                signInButton.alpha = 1
-                signInPasswordTxtField.alpha = 1
-                self.signInView.layoutIfNeeded()
+            if sender.view!.tag == 0 {
+
+                if (self.credentialsView.frame.origin.y - (self.originalSignUpViewRect?.origin.y)! >= 100)  {
+
+
+                UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn], animations: {
+                    self.credentialsView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
+                    self.signInView.transform = CGAffineTransform(scaleX: (self.originalSignUpViewRect?.width)!/(self.originalSignInViewRect?.width)!, y: (self.originalSignUpViewRect?.height)!/(self.originalSignInViewRect?.height)!)
+                    self.signInView.transform = CGAffineTransform(translationX: 0/*-(self.signInView.frame.origin.x-self.originalSignUpViewRect!.origin.x)*/, y: (self.originalSignUpViewRect!.origin.y-self.signInView.frame.origin.y))
+                    
+                    self.signInLbl.isHidden = false
+                    
+                    self.logoImageView.frame = CGRect(x: (self.signInView.frame.width-90)/2, y: 55+15, width: 90, height: 90)
+                    
+                    self.userNameTxtField.frame = CGRect(x: 13, y: 170+15, width: self.signInView.frame.width-26, height: 44)
+                    
+                    self.signInPasswordTxtField.frame = CGRect(x: 13, y: 227+15, width: self.signInView.frame.width-26, height: 44)
+                    
+                    self.rememberMeBtn.frame = CGRect(x: 11.5, y: 290+15, width: 17, height: 17)
+                    self.rememberMeLbl.frame = CGRect(x: 32.5, y: 288+15, width: 112, height: 21)
+                    self.forgotPassword.frame = CGRect(x: self.signInPasswordTxtField.frame.origin.x+self.signInPasswordTxtField.frame.width-137, y: 288+15, width: 137, height: 21)
+                    
+                    self.signInButton.frame = CGRect(x: self.signInButton.frame.origin.x, y: self.signInView.frame.height-114, width: self.signInView.frame.width-26, height: self.signInButton.frame.height)
+                    self.signInWithfbBtn.frame = CGRect(x: self.signInWithfbBtn.frame.origin.x, y: self.signInView.frame.height-57, width: self.signInView.frame.width-26, height: self.signInWithfbBtn.frame.height)
+                    
+                    
+                    
+                    self.signInLbl.alpha = 1
+                }, completion: { (action) in
+                        self.credentialsView.alpha = 0
+                    UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
+                        self.signUplbl.isHidden = true
+                        self.credentialsView.backgroundColor = UIColor(red: 237/255, green: 238/255, blue: 239/255, alpha: 1)
+                        self.containerView.bringSubviewToFront(self.signInView)
+                        
+                        self.signInView.layoutIfNeeded()
+                    }, completion: { (action) in
+                        self.credentialsView.frame = self.originalSignInViewRect!
+                        self.setupSignUpView()
+                        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
+                            self.credentialsView.alpha = 1
+                            
+                        }, completion: nil)
+                        })
+                })
+
             }
             else{
-                signInView.frame = originalSignInViewRect!
-                credentialsView.alpha = 1
-                
-              //  centerXSignInView.constant = 0
-              //  centerXCredentialsView.constant = 0
-                signInLbl.alpha = 0
-                userNameTxtField.alpha = 0
-                signInButton.alpha = 0
-                signInPasswordTxtField.alpha = 0
+                self.signInView.frame = self.originalSignInViewRect!
+                self.credentialsView.frame = self.originalSignUpViewRect!
+                self.credentialsView.alpha = 1
+
+              
+                self.signInLbl.alpha = 0
+                self.userNameTxtField.alpha = 0
+                self.signInButton.alpha = 0
+                self.signInPasswordTxtField.alpha = 0
                 self.signInView.layoutIfNeeded()
             }
+
+            self.signInLbl.frame = CGRect(x: self.signInLbl.frame.origin.x, y: self.signInLbl.frame.origin.y, width: self.signInView.frame.width, height: self.signInLbl.frame.height)
+            self.userNameTxtField.frame = CGRect(x: self.userNameTxtField.frame.origin.x, y: self.userNameTxtField.frame.origin.y, width: self.signInView.frame.width-26, height: self.userNameTxtField.frame.height)
+            self.signInPasswordTxtField.frame = CGRect(x: self.signInPasswordTxtField.frame.origin.x, y: self.signInPasswordTxtField.frame.origin.y, width: self.signInView.frame.width-26, height: self.signInPasswordTxtField.frame.height)
+            self.signInButton.frame = CGRect(x: self.signInButton.frame.origin.x, y: self.signInButton.frame.origin.y, width: self.signInView.frame.width-26, height: self.signInButton.frame.height)
+        }else{
+         if (self.signInView.frame.origin.y - (self.originalSignInViewRect?.origin.y)! >= 100)  {
+
+            UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
+                self.signInView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
+                self.credentialsView.transform = CGAffineTransform(scaleX: (self.originalSignUpViewRect?.width)!/(self.originalSignInViewRect?.width)!, y: (self.originalSignUpViewRect?.height)!/(self.originalSignInViewRect?.height)!)
+                self.credentialsView.transform = CGAffineTransform(translationX: 0, y: (self.originalSignUpViewRect!.origin.y-self.credentialsView.frame.origin.y))
+                self.signUplbl.isHidden = false
+            }, completion: { (action) in
+                
+                    self.signInView.alpha = 0
+                
+                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
+                    self.credentialsView.backgroundColor = UIColor.white
+                    self.signInLbl.isHidden = true
+                    
+                    self.containerView.bringSubviewToFront(self.credentialsView)
+                }, completion: { (action) in
+                    self.signInView.frame = self.originalSignInViewRect!
+                    self.setupSignInView()
+                    UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
+                         self.signInView.alpha = 1
+                        
+                    }, completion: nil)
+                   
+                    })
+            })
+           
+
             
-            signInLbl.frame = CGRect(x: signInLbl.frame.origin.x, y: signInLbl.frame.origin.y, width: signInView.frame.width, height: signInLbl.frame.height)
-            userNameTxtField.frame = CGRect(x: userNameTxtField.frame.origin.x, y: userNameTxtField.frame.origin.y, width: signInView.frame.width-26, height: userNameTxtField.frame.height)
-            signInPasswordTxtField.frame = CGRect(x: signInPasswordTxtField.frame.origin.x, y: signInPasswordTxtField.frame.origin.y, width: signInView.frame.width-26, height: signInPasswordTxtField.frame.height)
-            signInButton.frame = CGRect(x: signInButton.frame.origin.x, y: signInButton.frame.origin.y, width: signInView.frame.width-26, height: signInButton.frame.height)
             
+
+                }
+            }
+            }
             break
         default:
             break

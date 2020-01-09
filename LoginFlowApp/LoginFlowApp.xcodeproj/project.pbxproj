@@ -41,6 +41,18 @@
 		B1234F6C23C30794007A874C /* SignIn19Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234F6623C30794007A874C /* SignIn19Models.swift */; };
 		B1234F6D23C30794007A874C /* SignIn19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234F6723C30794007A874C /* SignIn19ViewController.swift */; };
 		B1234F6E23C30794007A874C /* SignIn19Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234F6823C30794007A874C /* SignIn19Interactor.swift */; };
+		B126D24023C5940B00724AB8 /* VerifyYourAccount24Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D23A23C5940B00724AB8 /* VerifyYourAccount24Presenter.swift */; };
+		B126D24123C5940B00724AB8 /* VerifyYourAccount24Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D23B23C5940B00724AB8 /* VerifyYourAccount24Worker.swift */; };
+		B126D24223C5940B00724AB8 /* VerifyYourAccount24Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D23C23C5940B00724AB8 /* VerifyYourAccount24Router.swift */; };
+		B126D24323C5940B00724AB8 /* VerifyYourAccount24Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D23D23C5940B00724AB8 /* VerifyYourAccount24Models.swift */; };
+		B126D24423C5940B00724AB8 /* VerifyYourAccount24ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D23E23C5940B00724AB8 /* VerifyYourAccount24ViewController.swift */; };
+		B126D24523C5940B00724AB8 /* VerifyYourAccount24Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D23F23C5940B00724AB8 /* VerifyYourAccount24Interactor.swift */; };
+		B126D24E23C5A09100724AB8 /* WelcomeGuest25Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D24823C5A09100724AB8 /* WelcomeGuest25Presenter.swift */; };
+		B126D24F23C5A09100724AB8 /* WelcomeGuest25Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D24923C5A09100724AB8 /* WelcomeGuest25Worker.swift */; };
+		B126D25023C5A09100724AB8 /* WelcomeGuest25Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D24A23C5A09100724AB8 /* WelcomeGuest25Router.swift */; };
+		B126D25123C5A09100724AB8 /* WelcomeGuest25Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D24B23C5A09100724AB8 /* WelcomeGuest25Models.swift */; };
+		B126D25223C5A09100724AB8 /* WelcomeGuest25ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D24C23C5A09100724AB8 /* WelcomeGuest25ViewController.swift */; };
+		B126D25323C5A09100724AB8 /* WelcomeGuest25Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126D24D23C5A09100724AB8 /* WelcomeGuest25Interactor.swift */; };
 		B128E37B23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E37A23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift */; };
 		B128E37D23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E37C23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift */; };
 		B128E38523B624A7007A91D5 /* SignUp_9Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B128E37F23B624A7007A91D5 /* SignUp_9Presenter.swift */; };
@@ -74,6 +86,19 @@
 		B14EB67023B76BE10068CF9D /* SignIn_11Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EB66A23B76BE10068CF9D /* SignIn_11Models.swift */; };
 		B14EB67123B76BE10068CF9D /* SignIn_11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EB66B23B76BE10068CF9D /* SignIn_11ViewController.swift */; };
 		B14EB67223B76BE10068CF9D /* SignIn_11Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EB66C23B76BE10068CF9D /* SignIn_11Interactor.swift */; };
+		B152F28423C468C800D101F8 /* Login22Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F27E23C468C800D101F8 /* Login22Presenter.swift */; };
+		B152F28523C468C800D101F8 /* Login22Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F27F23C468C800D101F8 /* Login22Worker.swift */; };
+		B152F28623C468C800D101F8 /* Login22Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F28023C468C800D101F8 /* Login22Router.swift */; };
+		B152F28723C468C800D101F8 /* Login22Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F28123C468C800D101F8 /* Login22Models.swift */; };
+		B152F28823C468C800D101F8 /* Login22ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F28223C468C800D101F8 /* Login22ViewController.swift */; };
+		B152F28923C468C800D101F8 /* Login22Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F28323C468C800D101F8 /* Login22Interactor.swift */; };
+		B152F28B23C4891B00D101F8 /* LogCollectionViewSignUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F28A23C4891B00D101F8 /* LogCollectionViewSignUpCell.swift */; };
+		B152F29F23C4969B00D101F8 /* ForgotPassword23Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F29923C4969B00D101F8 /* ForgotPassword23Presenter.swift */; };
+		B152F2A023C4969B00D101F8 /* ForgotPassword23Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F29A23C4969B00D101F8 /* ForgotPassword23Worker.swift */; };
+		B152F2A123C4969B00D101F8 /* ForgotPassword23Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F29B23C4969B00D101F8 /* ForgotPassword23Router.swift */; };
+		B152F2A223C4969B00D101F8 /* ForgotPassword23Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F29C23C4969B00D101F8 /* ForgotPassword23Models.swift */; };
+		B152F2A323C4969B00D101F8 /* ForgotPassword23ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F29D23C4969B00D101F8 /* ForgotPassword23ViewController.swift */; };
+		B152F2A423C4969B00D101F8 /* ForgotPassword23Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152F29E23C4969B00D101F8 /* ForgotPassword23Interactor.swift */; };
 		B1B0893F23AB78BF008E2472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0893E23AB78BF008E2472 /* AppDelegate.swift */; };
 		B1B0894423AB78BF008E2472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B0894223AB78BF008E2472 /* Main.storyboard */; };
 		B1B0894723AB78BF008E2472 /* LoginFlowApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1B0894523AB78BF008E2472 /* LoginFlowApp.xcdatamodeld */; };
@@ -92,7 +117,7 @@
 		B1E0B29623C3389200E148CD /* Log21Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0B29023C3389200E148CD /* Log21Models.swift */; };
 		B1E0B29723C3389200E148CD /* Log21ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0B29123C3389200E148CD /* Log21ViewController.swift */; };
 		B1E0B29823C3389200E148CD /* Log21Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0B29223C3389200E148CD /* Log21Interactor.swift */; };
-		B1E0B29A23C33F4C00E148CD /* LogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0B29923C33F4C00E148CD /* LogCollectionViewCell.swift */; };
+		B1E0B29A23C33F4C00E148CD /* LogCollectionViewSignInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0B29923C33F4C00E148CD /* LogCollectionViewSignInCell.swift */; };
 		B1E4336F23B0872000900FFF /* Login_6Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4336923B0872000900FFF /* Login_6Presenter.swift */; };
 		B1E4337023B0872000900FFF /* Login_6Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4336A23B0872000900FFF /* Login_6Worker.swift */; };
 		B1E4337123B0872000900FFF /* Login_6Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4336B23B0872000900FFF /* Login_6Router.swift */; };
@@ -172,6 +197,18 @@
 		B1234F6623C30794007A874C /* SignIn19Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn19Models.swift; sourceTree = "<group>"; };
 		B1234F6723C30794007A874C /* SignIn19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn19ViewController.swift; sourceTree = "<group>"; };
 		B1234F6823C30794007A874C /* SignIn19Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn19Interactor.swift; sourceTree = "<group>"; };
+		B126D23A23C5940B00724AB8 /* VerifyYourAccount24Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourAccount24Presenter.swift; sourceTree = "<group>"; };
+		B126D23B23C5940B00724AB8 /* VerifyYourAccount24Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourAccount24Worker.swift; sourceTree = "<group>"; };
+		B126D23C23C5940B00724AB8 /* VerifyYourAccount24Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourAccount24Router.swift; sourceTree = "<group>"; };
+		B126D23D23C5940B00724AB8 /* VerifyYourAccount24Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourAccount24Models.swift; sourceTree = "<group>"; };
+		B126D23E23C5940B00724AB8 /* VerifyYourAccount24ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourAccount24ViewController.swift; sourceTree = "<group>"; };
+		B126D23F23C5940B00724AB8 /* VerifyYourAccount24Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourAccount24Interactor.swift; sourceTree = "<group>"; };
+		B126D24823C5A09100724AB8 /* WelcomeGuest25Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuest25Presenter.swift; sourceTree = "<group>"; };
+		B126D24923C5A09100724AB8 /* WelcomeGuest25Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuest25Worker.swift; sourceTree = "<group>"; };
+		B126D24A23C5A09100724AB8 /* WelcomeGuest25Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuest25Router.swift; sourceTree = "<group>"; };
+		B126D24B23C5A09100724AB8 /* WelcomeGuest25Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuest25Models.swift; sourceTree = "<group>"; };
+		B126D24C23C5A09100724AB8 /* WelcomeGuest25ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuest25ViewController.swift; sourceTree = "<group>"; };
+		B126D24D23C5A09100724AB8 /* WelcomeGuest25Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGuest25Interactor.swift; sourceTree = "<group>"; };
 		B128E37A23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInDetail_6TableViewCell.swift; sourceTree = "<group>"; };
 		B128E37C23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton_6TableViewCell.swift; sourceTree = "<group>"; };
 		B128E37F23B624A7007A91D5 /* SignUp_9Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_9Presenter.swift; sourceTree = "<group>"; };
@@ -205,6 +242,19 @@
 		B14EB66A23B76BE10068CF9D /* SignIn_11Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_11Models.swift; sourceTree = "<group>"; };
 		B14EB66B23B76BE10068CF9D /* SignIn_11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_11ViewController.swift; sourceTree = "<group>"; };
 		B14EB66C23B76BE10068CF9D /* SignIn_11Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_11Interactor.swift; sourceTree = "<group>"; };
+		B152F27E23C468C800D101F8 /* Login22Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login22Presenter.swift; sourceTree = "<group>"; };
+		B152F27F23C468C800D101F8 /* Login22Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login22Worker.swift; sourceTree = "<group>"; };
+		B152F28023C468C800D101F8 /* Login22Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login22Router.swift; sourceTree = "<group>"; };
+		B152F28123C468C800D101F8 /* Login22Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login22Models.swift; sourceTree = "<group>"; };
+		B152F28223C468C800D101F8 /* Login22ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login22ViewController.swift; sourceTree = "<group>"; };
+		B152F28323C468C800D101F8 /* Login22Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login22Interactor.swift; sourceTree = "<group>"; };
+		B152F28A23C4891B00D101F8 /* LogCollectionViewSignUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectionViewSignUpCell.swift; sourceTree = "<group>"; };
+		B152F29923C4969B00D101F8 /* ForgotPassword23Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword23Presenter.swift; sourceTree = "<group>"; };
+		B152F29A23C4969B00D101F8 /* ForgotPassword23Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword23Worker.swift; sourceTree = "<group>"; };
+		B152F29B23C4969B00D101F8 /* ForgotPassword23Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword23Router.swift; sourceTree = "<group>"; };
+		B152F29C23C4969B00D101F8 /* ForgotPassword23Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword23Models.swift; sourceTree = "<group>"; };
+		B152F29D23C4969B00D101F8 /* ForgotPassword23ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword23ViewController.swift; sourceTree = "<group>"; };
+		B152F29E23C4969B00D101F8 /* ForgotPassword23Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword23Interactor.swift; sourceTree = "<group>"; };
 		B1B0893B23AB78BF008E2472 /* LoginFlowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginFlowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B0893E23AB78BF008E2472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B0894323AB78BF008E2472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,7 +275,7 @@
 		B1E0B29023C3389200E148CD /* Log21Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log21Models.swift; sourceTree = "<group>"; };
 		B1E0B29123C3389200E148CD /* Log21ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log21ViewController.swift; sourceTree = "<group>"; };
 		B1E0B29223C3389200E148CD /* Log21Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log21Interactor.swift; sourceTree = "<group>"; };
-		B1E0B29923C33F4C00E148CD /* LogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1E0B29923C33F4C00E148CD /* LogCollectionViewSignInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectionViewSignInCell.swift; sourceTree = "<group>"; };
 		B1E4336923B0872000900FFF /* Login_6Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_6Presenter.swift; sourceTree = "<group>"; };
 		B1E4336A23B0872000900FFF /* Login_6Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_6Worker.swift; sourceTree = "<group>"; };
 		B1E4336B23B0872000900FFF /* Login_6Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_6Router.swift; sourceTree = "<group>"; };
@@ -390,6 +440,9 @@
 			isa = PBXGroup;
 			children = (
 				B1234F7C23C337A5007A874C /* Login 21 col 1 */,
+				B152F27D23C45D3700D101F8 /* Login 22 col 2 */,
+				B152F28C23C48F3600D101F8 /* Forgot Password 23 col 3 */,
+				B126D23923C593C100724AB8 /* Verify Your Account 24 col 4 */,
 			);
 			path = "Row 6";
 			sourceTree = "<group>";
@@ -397,7 +450,8 @@
 		B1234F7C23C337A5007A874C /* Login 21 col 1 */ = {
 			isa = PBXGroup;
 			children = (
-				B1E0B29923C33F4C00E148CD /* LogCollectionViewCell.swift */,
+				B1E0B29923C33F4C00E148CD /* LogCollectionViewSignInCell.swift */,
+				B152F28A23C4891B00D101F8 /* LogCollectionViewSignUpCell.swift */,
 				B1E0B28D23C3389200E148CD /* Log21Presenter.swift */,
 				B1E0B28E23C3389200E148CD /* Log21Worker.swift */,
 				B1E0B28F23C3389200E148CD /* Log21Router.swift */,
@@ -406,6 +460,40 @@
 				B1E0B29223C3389200E148CD /* Log21Interactor.swift */,
 			);
 			path = "Login 21 col 1";
+			sourceTree = "<group>";
+		};
+		B126D23923C593C100724AB8 /* Verify Your Account 24 col 4 */ = {
+			isa = PBXGroup;
+			children = (
+				B126D23A23C5940B00724AB8 /* VerifyYourAccount24Presenter.swift */,
+				B126D23B23C5940B00724AB8 /* VerifyYourAccount24Worker.swift */,
+				B126D23C23C5940B00724AB8 /* VerifyYourAccount24Router.swift */,
+				B126D23D23C5940B00724AB8 /* VerifyYourAccount24Models.swift */,
+				B126D23E23C5940B00724AB8 /* VerifyYourAccount24ViewController.swift */,
+				B126D23F23C5940B00724AB8 /* VerifyYourAccount24Interactor.swift */,
+			);
+			path = "Verify Your Account 24 col 4";
+			sourceTree = "<group>";
+		};
+		B126D24623C59F7900724AB8 /* Row 7 */ = {
+			isa = PBXGroup;
+			children = (
+				B126D24723C59F8D00724AB8 /* welcome col 1 */,
+			);
+			path = "Row 7";
+			sourceTree = "<group>";
+		};
+		B126D24723C59F8D00724AB8 /* welcome col 1 */ = {
+			isa = PBXGroup;
+			children = (
+				B126D24823C5A09100724AB8 /* WelcomeGuest25Presenter.swift */,
+				B126D24923C5A09100724AB8 /* WelcomeGuest25Worker.swift */,
+				B126D24A23C5A09100724AB8 /* WelcomeGuest25Router.swift */,
+				B126D24B23C5A09100724AB8 /* WelcomeGuest25Models.swift */,
+				B126D24C23C5A09100724AB8 /* WelcomeGuest25ViewController.swift */,
+				B126D24D23C5A09100724AB8 /* WelcomeGuest25Interactor.swift */,
+			);
+			path = "welcome col 1";
 			sourceTree = "<group>";
 		};
 		B128E37E23B62461007A91D5 /* Sign Up_9_col_1 */ = {
@@ -482,6 +570,32 @@
 			path = SignIn_11_col_3;
 			sourceTree = "<group>";
 		};
+		B152F27D23C45D3700D101F8 /* Login 22 col 2 */ = {
+			isa = PBXGroup;
+			children = (
+				B152F27E23C468C800D101F8 /* Login22Presenter.swift */,
+				B152F27F23C468C800D101F8 /* Login22Worker.swift */,
+				B152F28023C468C800D101F8 /* Login22Router.swift */,
+				B152F28123C468C800D101F8 /* Login22Models.swift */,
+				B152F28223C468C800D101F8 /* Login22ViewController.swift */,
+				B152F28323C468C800D101F8 /* Login22Interactor.swift */,
+			);
+			path = "Login 22 col 2";
+			sourceTree = "<group>";
+		};
+		B152F28C23C48F3600D101F8 /* Forgot Password 23 col 3 */ = {
+			isa = PBXGroup;
+			children = (
+				B152F29923C4969B00D101F8 /* ForgotPassword23Presenter.swift */,
+				B152F29A23C4969B00D101F8 /* ForgotPassword23Worker.swift */,
+				B152F29B23C4969B00D101F8 /* ForgotPassword23Router.swift */,
+				B152F29C23C4969B00D101F8 /* ForgotPassword23Models.swift */,
+				B152F29D23C4969B00D101F8 /* ForgotPassword23ViewController.swift */,
+				B152F29E23C4969B00D101F8 /* ForgotPassword23Interactor.swift */,
+			);
+			path = "Forgot Password 23 col 3";
+			sourceTree = "<group>";
+		};
 		B1B0893223AB78BF008E2472 = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +624,7 @@
 				B140874323BDC859003E7C0D /* Row 4 */,
 				B1234F5423C2EF26007A874C /* Row 5 */,
 				B1234F6F23C3374D007A874C /* Row 6 */,
+				B126D24623C59F7900724AB8 /* Row 7 */,
 				B1B0893E23AB78BF008E2472 /* AppDelegate.swift */,
 				B1B0894823AB78C0008E2472 /* Assets.xcassets */,
 				B1B0894A23AB78C0008E2472 /* LaunchScreen.storyboard */,
@@ -779,11 +894,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B152F2A223C4969B00D101F8 /* ForgotPassword23Models.swift in Sources */,
 				B1E9D22D23AC841800FF0F60 /* SignUp_2Models.swift in Sources */,
 				B11DC5DF23ADE55900DB496A /* SignIn_4Interactor.swift in Sources */,
 				B11DC5FD23AE229400DB496A /* Login_5ViewController.swift in Sources */,
 				B128E38623B624A7007A91D5 /* SignUp_9Worker.swift in Sources */,
 				B1234F6D23C30794007A874C /* SignIn19ViewController.swift in Sources */,
+				B126D24223C5940B00724AB8 /* VerifyYourAccount24Router.swift in Sources */,
+				B152F28523C468C800D101F8 /* Login22Worker.swift in Sources */,
 				B1E0B29623C3389200E148CD /* Log21Models.swift in Sources */,
 				B1E4337323B0872000900FFF /* Login_6ViewController.swift in Sources */,
 				B1234F5E23C2EF90007A874C /* SignIn18Router.swift in Sources */,
@@ -795,6 +913,7 @@
 				B1B0895D23AB78FB008E2472 /* SignUp_1ViewController.swift in Sources */,
 				B14EB66523B756780068CF9D /* SignUp_10Interactor.swift in Sources */,
 				B128E38523B624A7007A91D5 /* SignUp_9Presenter.swift in Sources */,
+				B152F2A423C4969B00D101F8 /* ForgotPassword23Interactor.swift in Sources */,
 				B128E38723B624A7007A91D5 /* SignUp_9Router.swift in Sources */,
 				B1E4337723B08E8A00900FFF /* Welcome2ViewController.swift in Sources */,
 				B1E4339C23B0906100900FFF /* SignUp_7ViewController.swift in Sources */,
@@ -804,14 +923,19 @@
 				B128E37B23B60D26007A91D5 /* LogInDetail_6TableViewCell.swift in Sources */,
 				B11DC5DA23ADE55900DB496A /* SignIn_4Presenter.swift in Sources */,
 				B140874023BDBBA2003E7C0D /* SignIn_12Models.swift in Sources */,
+				B126D24023C5940B00724AB8 /* VerifyYourAccount24Presenter.swift in Sources */,
+				B152F28B23C4891B00D101F8 /* LogCollectionViewSignUpCell.swift in Sources */,
 				B1E0B29523C3389200E148CD /* Log21Router.swift in Sources */,
+				B126D24423C5940B00724AB8 /* VerifyYourAccount24ViewController.swift in Sources */,
 				B1E433B023B0BFB300900FFF /* SignUp_8ViewController.swift in Sources */,
 				B140874523BDC912003E7C0D /* LightBorderTextField.swift in Sources */,
 				B11DC5D223ADE52A00DB496A /* SignUp_4Interactor.swift in Sources */,
 				B1E4338023B08FDB00900FFF /* SignIn_7Router.swift in Sources */,
+				B126D24E23C5A09100724AB8 /* WelcomeGuest25Presenter.swift in Sources */,
 				B1E4338323B08FDB00900FFF /* SignIn_7Interactor.swift in Sources */,
 				B1E4337423B0872000900FFF /* Login_6Interactor.swift in Sources */,
 				B1234F6E23C30794007A874C /* SignIn19Interactor.swift in Sources */,
+				B152F2A023C4969B00D101F8 /* ForgotPassword23Worker.swift in Sources */,
 				B11DC5D023ADE52A00DB496A /* SignUp_4Models.swift in Sources */,
 				B1E4339923B0906100900FFF /* SignUp_7Worker.swift in Sources */,
 				B14EB66223B756780068CF9D /* SignUp_10Router.swift in Sources */,
@@ -831,9 +955,13 @@
 				B14EB66423B756780068CF9D /* SignUp_10ViewController.swift in Sources */,
 				B11DC5CF23ADE52A00DB496A /* SignUp_4Router.swift in Sources */,
 				B1234F6A23C30794007A874C /* SignIn19Worker.swift in Sources */,
+				B152F28423C468C800D101F8 /* Login22Presenter.swift in Sources */,
 				B1E433B423B0F78700900FFF /* ViewController.swift in Sources */,
 				B11DC5DD23ADE55900DB496A /* SignIn_4Models.swift in Sources */,
 				B10D206623BF3E3C00071EDF /* OptionsTableViewCell.swift in Sources */,
+				B126D25023C5A09100724AB8 /* WelcomeGuest25Router.swift in Sources */,
+				B152F28623C468C800D101F8 /* Login22Router.swift in Sources */,
+				B152F2A323C4969B00D101F8 /* ForgotPassword23ViewController.swift in Sources */,
 				B1234F6B23C30794007A874C /* SignIn19Router.swift in Sources */,
 				B1E4339B23B0906100900FFF /* SignUp_7Models.swift in Sources */,
 				B11DC5FE23AE229400DB496A /* Login_5Interactor.swift in Sources */,
@@ -848,12 +976,16 @@
 				B1234F6C23C30794007A874C /* SignIn19Models.swift in Sources */,
 				B14EB67023B76BE10068CF9D /* SignIn_11Models.swift in Sources */,
 				B11DC5DB23ADE55900DB496A /* SignIn_4Worker.swift in Sources */,
+				B126D24523C5940B00724AB8 /* VerifyYourAccount24Interactor.swift in Sources */,
+				B126D25123C5A09100724AB8 /* WelcomeGuest25Models.swift in Sources */,
 				B1E4338123B08FDB00900FFF /* SignIn_7Models.swift in Sources */,
 				B1B0895923AB78FB008E2472 /* SignUp_1Presenter.swift in Sources */,
+				B126D24123C5940B00724AB8 /* VerifyYourAccount24Worker.swift in Sources */,
 				B140874223BDBBA2003E7C0D /* SignIn_12Interactor.swift in Sources */,
 				B1234F5C23C2EF90007A874C /* SignIn18Presenter.swift in Sources */,
 				B128E38823B624A7007A91D5 /* SignUp_9Models.swift in Sources */,
 				B140875023BDE2EA003E7C0D /* SignIn13Models.swift in Sources */,
+				B126D24323C5940B00724AB8 /* VerifyYourAccount24Models.swift in Sources */,
 				B1B0895B23AB78FB008E2472 /* SignUp_1Router.swift in Sources */,
 				B14EB66323B756780068CF9D /* SignUp_10Models.swift in Sources */,
 				B14EB66D23B76BE10068CF9D /* SignIn_11Presenter.swift in Sources */,
@@ -869,18 +1001,23 @@
 				B14EB66F23B76BE10068CF9D /* SignIn_11Router.swift in Sources */,
 				B1E0B29323C3389200E148CD /* Log21Presenter.swift in Sources */,
 				B1E0B29723C3389200E148CD /* Log21ViewController.swift in Sources */,
+				B152F28823C468C800D101F8 /* Login22ViewController.swift in Sources */,
 				B128E38923B624A7007A91D5 /* SignUp_9ViewController.swift in Sources */,
 				B11DC5F123AE211F00DB496A /* LoginButtonTableViewCell.swift in Sources */,
 				B1E433B123B0BFB300900FFF /* SignUp_8Interactor.swift in Sources */,
 				B14EB66023B756780068CF9D /* SignUp_10Presenter.swift in Sources */,
 				B140875223BDE2EA003E7C0D /* SignIn13Interactor.swift in Sources */,
+				B126D24F23C5A09100724AB8 /* WelcomeGuest25Worker.swift in Sources */,
 				B1B0893F23AB78BF008E2472 /* AppDelegate.swift in Sources */,
+				B126D25323C5A09100724AB8 /* WelcomeGuest25Interactor.swift in Sources */,
 				B1E9D23F23ACE5BC00FF0F60 /* SignUp_3Models.swift in Sources */,
 				B1E9D23523ACCDD200FF0F60 /* SignUpTextField.swift in Sources */,
 				B140873E23BDBBA2003E7C0D /* SignIn_12Worker.swift in Sources */,
 				B1E433AE23B0BFB300900FFF /* SignUp_8Router.swift in Sources */,
 				B1E433AC23B0BFB300900FFF /* SignUp_8Presenter.swift in Sources */,
-				B1E0B29A23C33F4C00E148CD /* LogCollectionViewCell.swift in Sources */,
+				B1E0B29A23C33F4C00E148CD /* LogCollectionViewSignInCell.swift in Sources */,
+				B126D25223C5A09100724AB8 /* WelcomeGuest25ViewController.swift in Sources */,
+				B152F28923C468C800D101F8 /* Login22Interactor.swift in Sources */,
 				B1E9D22E23AC841800FF0F60 /* SignUp_2ViewController.swift in Sources */,
 				B1E9D23C23ACE5BC00FF0F60 /* SignUp_3Presenter.swift in Sources */,
 				B1B0895E23AB78FB008E2472 /* SignUp_1Interactor.swift in Sources */,
@@ -888,6 +1025,7 @@
 				B1234F5D23C2EF90007A874C /* SignIn18Worker.swift in Sources */,
 				B1E4338223B08FDB00900FFF /* SignIn_7ViewController.swift in Sources */,
 				B14EB66E23B76BE10068CF9D /* SignIn_11Worker.swift in Sources */,
+				B152F29F23C4969B00D101F8 /* ForgotPassword23Presenter.swift in Sources */,
 				B140873F23BDBBA2003E7C0D /* SignIn_12Router.swift in Sources */,
 				B1E4337F23B08FDB00900FFF /* SignIn_7Worker.swift in Sources */,
 				B1E9D24023ACE5BC00FF0F60 /* SignUp_3ViewController.swift in Sources */,
@@ -896,9 +1034,11 @@
 				B1E9D23D23ACE5BC00FF0F60 /* SignUp_3Worker.swift in Sources */,
 				B1E9D23E23ACE5BC00FF0F60 /* SignUp_3Router.swift in Sources */,
 				B1E9D22F23AC841800FF0F60 /* SignUp_2Interactor.swift in Sources */,
+				B152F2A123C4969B00D101F8 /* ForgotPassword23Router.swift in Sources */,
 				B11DC5FB23AE229400DB496A /* Login_5Router.swift in Sources */,
 				B11DC5FC23AE229400DB496A /* Login_5Models.swift in Sources */,
 				B128E37D23B60D3C007A91D5 /* LoginButton_6TableViewCell.swift in Sources */,
+				B152F28723C468C800D101F8 /* Login22Models.swift in Sources */,
 				B1E9D22B23AC841800FF0F60 /* SignUp_2Worker.swift in Sources */,
 				B128E38A23B624A7007A91D5 /* SignUp_9Interactor.swift in Sources */,
 			);
