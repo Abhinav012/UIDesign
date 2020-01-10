@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTd-9J-YJo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nHm-Ea-V7A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -4950,11 +4950,11 @@
                                     <constraint firstItem="VvH-Or-KHd" firstAttribute="centerY" secondItem="4tw-EQ-P4G" secondAttribute="centerY" id="soS-h5-c13"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-yh-aLs">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXB-P4-ywh">
                                 <rect key="frame" x="0.0" y="62" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUx-zg-XTg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Space_Debris" translatesAutoresizingMaskIntoConstraints="NO" id="t6C-If-KjL">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
@@ -4964,7 +4964,7 @@
                                                 <rect key="frame" x="21" y="40" width="332" height="441.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9T-V1-ioX">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9T-V1-ioX">
                                                         <rect key="frame" x="0.0" y="0.0" width="332" height="63"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -4996,6 +4996,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" image="unchecked_app_background"/>
                                                         <connections>
+                                                            <action selector="didTappedRememberMeBtn:" destination="rdW-Rn-djr" eventType="touchUpInside" id="jcY-Oh-Zhv"/>
                                                             <action selector="rememberMe:" destination="DJM-Si-Fh2" eventType="touchUpInside" id="p50-Ip-wiE"/>
                                                             <action selector="rememberMeTapped:" destination="pr1-mb-ybd" eventType="touchUpInside" id="wUy-ds-ILb"/>
                                                         </connections>
@@ -5111,27 +5112,29 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="603" id="1p8-Mq-soF"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MUx-zg-XTg" firstAttribute="leading" secondItem="cNb-yh-aLs" secondAttribute="leading" id="0bT-dU-5Fm"/>
-                                    <constraint firstItem="MUx-zg-XTg" firstAttribute="top" secondItem="cNb-yh-aLs" secondAttribute="top" id="EXt-N2-Jno"/>
-                                    <constraint firstAttribute="bottom" secondItem="MUx-zg-XTg" secondAttribute="bottom" id="byQ-lU-AgW"/>
-                                    <constraint firstAttribute="trailing" secondItem="MUx-zg-XTg" secondAttribute="trailing" id="du4-zF-EVQ"/>
+                                    <constraint firstItem="MUx-zg-XTg" firstAttribute="leading" secondItem="hXB-P4-ywh" secondAttribute="leading" id="1Qk-Tc-QQV"/>
+                                    <constraint firstAttribute="trailing" secondItem="MUx-zg-XTg" secondAttribute="trailing" id="99t-fE-TZY"/>
+                                    <constraint firstAttribute="bottom" secondItem="MUx-zg-XTg" secondAttribute="bottom" id="tk4-Zp-bcP"/>
+                                    <constraint firstItem="MUx-zg-XTg" firstAttribute="top" secondItem="hXB-P4-ywh" secondAttribute="top" id="uYW-n2-Tc5"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MUx-zg-XTg" firstAttribute="height" secondItem="rms-xl-njL" secondAttribute="height" id="BYE-A0-WG9"/>
-                            <constraint firstItem="cNb-yh-aLs" firstAttribute="bottom" secondItem="9oe-bf-420" secondAttribute="bottom" id="JJc-nf-9ME"/>
-                            <constraint firstItem="cNb-yh-aLs" firstAttribute="top" secondItem="4tw-EQ-P4G" secondAttribute="bottom" id="JzK-es-r7b"/>
-                            <constraint firstItem="cNb-yh-aLs" firstAttribute="trailing" secondItem="9oe-bf-420" secondAttribute="trailing" id="LrX-e0-6h1"/>
+                            <constraint firstItem="MUx-zg-XTg" firstAttribute="width" secondItem="rms-xl-njL" secondAttribute="width" id="9L4-uR-Mm6"/>
+                            <constraint firstItem="9oe-bf-420" firstAttribute="bottom" secondItem="hXB-P4-ywh" secondAttribute="bottom" id="B1M-qa-P0x"/>
                             <constraint firstItem="4tw-EQ-P4G" firstAttribute="trailing" secondItem="9oe-bf-420" secondAttribute="trailing" id="STX-GM-BhG"/>
-                            <constraint firstItem="cNb-yh-aLs" firstAttribute="leading" secondItem="9oe-bf-420" secondAttribute="leading" id="Thh-Kd-0GI"/>
+                            <constraint firstItem="9oe-bf-420" firstAttribute="trailing" secondItem="hXB-P4-ywh" secondAttribute="trailing" id="bXn-cp-HYG"/>
                             <constraint firstItem="4tw-EQ-P4G" firstAttribute="leading" secondItem="9oe-bf-420" secondAttribute="leading" id="chz-s3-3uM"/>
                             <constraint firstItem="4tw-EQ-P4G" firstAttribute="top" secondItem="9oe-bf-420" secondAttribute="top" id="jQi-gg-bnZ"/>
-                            <constraint firstItem="MUx-zg-XTg" firstAttribute="width" secondItem="rms-xl-njL" secondAttribute="width" id="mDM-Sg-m3k"/>
+                            <constraint firstItem="hXB-P4-ywh" firstAttribute="leading" secondItem="9oe-bf-420" secondAttribute="leading" id="jZq-pd-U4V"/>
+                            <constraint firstItem="hXB-P4-ywh" firstAttribute="top" secondItem="4tw-EQ-P4G" secondAttribute="bottom" id="p92-w2-HVv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9oe-bf-420"/>
                     </view>
@@ -5152,7 +5155,6 @@
                         <outlet property="passwordTxtField" destination="u9e-Qh-J4u" id="nSC-es-Qo9"/>
                         <outlet property="rememberMeBtn" destination="5mm-Pa-4vV" id="16X-pu-HyI"/>
                         <outlet property="rememberMeLbl" destination="HdE-vg-gpg" id="tdR-7T-NAr"/>
-                        <outlet property="scrollView" destination="cNb-yh-aLs" id="9l8-vI-UVP"/>
                         <outlet property="signInButton" destination="KX5-gD-oax" id="w4z-pk-vsO"/>
                         <outlet property="signInLbl" destination="s9T-V1-ioX" id="nsd-gM-Qht"/>
                         <outlet property="signInPasswordTxtField" destination="Qr1-zB-uuN" id="IAk-2Q-5AP"/>

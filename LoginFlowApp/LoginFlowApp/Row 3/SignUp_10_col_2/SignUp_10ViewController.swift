@@ -25,12 +25,13 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
   var originalSignInViewRect: CGRect?
   var originalSignUpViewRect: CGRect?
   var aspectRatio: CGFloat?
-
+  var doRememberMe: Bool = false
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
 
-    @IBOutlet weak var scrollView: UIScrollView!
+   // @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var signInView: UIView!
@@ -146,7 +147,7 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
         navBarView.backgroundColor = .appRed
         createAccountButton.backgroundColor = .appRed
         
-        scrollView.frame = CGRect(x: 0, y: 62, width: self.view.frame.width, height: self.view.frame.height-62)
+//        scrollView.frame = CGRect(x: 0, y: 62, width: self.view.frame.width, height: self.view.frame.height-62)
         //self.view.addSubview(scrollView)
         
         containerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 667)
@@ -195,7 +196,8 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
         rememberMeLbl.frame = CGRect(x: 32.5, y: 298, width: 112, height: 21)
         forgotPassword.frame = CGRect(x: signInPasswordTxtField.frame.origin.x+signInPasswordTxtField.frame.width-137, y: 298, width: 137, height: 21)
         
-
+        self.signInButton.frame = CGRect(x: self.signInButton.frame.origin.x, y: self.signInView.frame.height-114, width: self.signInView.frame.width-26, height: self.signInButton.frame.height)
+        self.signInWithfbBtn.frame = CGRect(x: self.signInWithfbBtn.frame.origin.x, y: self.signInView.frame.height-57, width: self.signInView.frame.width-26, height: self.signInWithfbBtn.frame.height)
     }
     
     func setupSignUpView(){
@@ -292,9 +294,13 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
 
 
                 UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseIn], animations: {
-                    self.credentialsView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
-                    self.signInView.transform = CGAffineTransform(scaleX: (self.originalSignUpViewRect?.width)!/(self.originalSignInViewRect?.width)!, y: (self.originalSignUpViewRect?.height)!/(self.originalSignInViewRect?.height)!)
-                    self.signInView.transform = CGAffineTransform(translationX: 0/*-(self.signInView.frame.origin.x-self.originalSignUpViewRect!.origin.x)*/, y: (self.originalSignUpViewRect!.origin.y-self.signInView.frame.origin.y))
+                    //self.credentialsView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
+                      self.credentialsView.frame.origin.y += self.containerView.frame.height
+                    //self.signInView.transform = CGAffineTransform(scaleX: (self.originalSignUpViewRect?.width)!/(self.signInView.frame.width), y: (self.originalSignUpViewRect?.height)!/(self.signInView.frame.height))
+                   // self.signInView.transform = CGAffineTransform(translationX: 0/*-(self.signInView.frame.origin.x-self.originalSignUpViewRect!.origin.x)*/, y: (self.originalSignUpViewRect!.origin.y-self.signInView.frame.origin.y))
+                    
+                    self.signInView.frame = CGRect(x: (self.originalSignUpViewRect?.origin.x)!, y: (self.originalSignUpViewRect?.origin.y)!, width: (self.originalSignUpViewRect?.width)!, height: (self.originalSignUpViewRect?.height)!)
+                    self.signInView.frame.origin.y += (self.originalSignUpViewRect!.origin.y-self.signInView.frame.origin.y)
                     
                     self.signInLbl.isHidden = false
                     
@@ -354,9 +360,10 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
          if (self.signInView.frame.origin.y - (self.originalSignInViewRect?.origin.y)! >= 100)  {
 
             UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut], animations: {
-                self.signInView.transform = CGAffineTransform(translationX: 0, y: self.containerView.frame.height)
-                self.credentialsView.transform = CGAffineTransform(scaleX: (self.originalSignUpViewRect?.width)!/(self.originalSignInViewRect?.width)!, y: (self.originalSignUpViewRect?.height)!/(self.originalSignInViewRect?.height)!)
-                self.credentialsView.transform = CGAffineTransform(translationX: 0, y: (self.originalSignUpViewRect!.origin.y-self.credentialsView.frame.origin.y))
+                self.signInView.frame.origin.y += self.containerView.frame.height
+                self.credentialsView.frame = CGRect(x: (self.originalSignUpViewRect?.origin.x)!, y: (self.originalSignUpViewRect?.origin.y)!, width: (self.originalSignUpViewRect?.width)!, height: (self.originalSignUpViewRect?.height)!)
+                self.credentialsView.frame.origin.y += (self.originalSignUpViewRect!.origin.y-self.credentialsView.frame.origin.y)
+                self.setupSignUpView()
                 self.signUplbl.isHidden = false
             }, completion: { (action) in
                 
@@ -368,7 +375,7 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
                     
                     self.containerView.bringSubviewToFront(self.credentialsView)
                 }, completion: { (action) in
-                    self.signInView.frame = self.originalSignInViewRect!
+                    //self.signInView.frame = self.originalSignInViewRect!
                     self.setupSignInView()
                     UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
                          self.signInView.alpha = 1
@@ -393,7 +400,22 @@ class SignUp_10ViewController: UIViewController, SignUp_10DisplayLogic, UIGestur
         
         }
     
-   
+    
+    @IBAction func didTappedRememberMeBtn(_ sender: Any) {
+        
+        var imgName = ""
+        doRememberMe.toggle()
+        
+        if doRememberMe{
+            imgName = "checked_box_app_background"
+        }
+        else{
+            imgName = "unchecked_app_background"
+        }
+        rememberMeBtn.setImage(UIImage(named: imgName), for: .normal)
+        
+    }
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
